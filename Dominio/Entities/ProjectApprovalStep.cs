@@ -6,7 +6,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace BD
+namespace _4_Dominio
 {
     public class ProjectApprovalStep
     {

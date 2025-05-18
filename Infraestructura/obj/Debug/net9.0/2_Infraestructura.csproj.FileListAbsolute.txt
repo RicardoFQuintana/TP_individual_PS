@@ -1,0 +1,6 @@
+E:\UNAJ\Proyecto software\TP_Individual_Parte_1\Infraestructura\obj\Debug\net9.0\2_Infraestructura.csproj.AssemblyReference.cache
+E:\UNAJ\Proyecto software\TP_Individual_Parte_1\Infraestructura\obj\Debug\net9.0\2_Infraestructura.GeneratedMSBuildEditorConfig.editorconfig
+E:\UNAJ\Proyecto software\TP_Individual_Parte_1\Infraestructura\obj\Debug\net9.0\2_Infraestructura.AssemblyInfoInputs.cache
+E:\UNAJ\Proyecto software\TP_Individual_Parte_1\Infraestructura\obj\Debug\net9.0\2_Infraestructura.AssemblyInfo.cs
+E:\UNAJ\Proyecto software\TP_Individual_Parte_1\Infraestructura\obj\Debug\net9.0\2_Infraestructura.csproj.CoreCompileInputs.cache
+E:\UNAJ\Proyecto software\TP_Individual_Parte_1\Infraestructura\obj\Debug\net9.0\2_Infraestructura.sourcelink.json
