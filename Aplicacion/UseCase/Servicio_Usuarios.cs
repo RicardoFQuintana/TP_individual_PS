@@ -3,9 +3,9 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using BD;
+using _4_Dominio;
 
-namespace ConsoleApp1
+namespace _3_Aplicacion
 {
     public class Servicio_Usuarios
     {

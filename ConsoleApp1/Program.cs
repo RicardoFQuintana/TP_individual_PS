@@ -1,7 +1,9 @@
 ﻿using System;
-using BD;
-using ConsoleApp1;
 using Microsoft.EntityFrameworkCore;
+using _2_Infraestructura;
+
+using _3_Aplicacion;
+using _4_Dominio;
 
 using var context = new ProyectosContext(new DbContextOptions<ProyectosContext>());
 
