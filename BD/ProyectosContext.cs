@@ -15,7 +15,7 @@ namespace BD
         {
             base.OnConfiguring(optionsBuilder);
             if (!optionsBuilder.IsConfigured) {
-                optionsBuilder.UseSqlServer("Server=(localdb)\\MSSQLLocalDB;Database=ProyectosDB;Trusted_Connection=True;");
+                optionsBuilder.UseSqlServer("Server=localhost\\SQLEXPRESS;Database=UserDB;Trusted_Connection=True;TrustServerCertificate=True");
             }
         }
 
