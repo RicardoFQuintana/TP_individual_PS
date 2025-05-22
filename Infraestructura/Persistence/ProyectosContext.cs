@@ -16,7 +16,7 @@ namespace _2_Infraestructura
         {
             base.OnConfiguring(optionsBuilder);
             if (!optionsBuilder.IsConfigured) {
-                optionsBuilder.UseSqlServer("Server=localhost\\SQLEXPRESS;Database=UserDB;Trusted_Connection=True;TrustServerCertificate=True");
+                optionsBuilder.UseSqlServer("Server=localhost\\SQLEXPRESS;Database=ProyectosDB;Trusted_Connection=True;TrustServerCertificate=True");
             }
         }
 

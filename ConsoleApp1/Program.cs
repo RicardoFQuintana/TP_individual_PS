@@ -1,77 +1,55 @@
 ﻿using System;
 using Microsoft.EntityFrameworkCore;
 using _2_Infraestructura;
-
-using _3_Aplicacion;
+using _2_Infraestructura.Querys;
+using _2_Infraestructura.Commands;
+using _3_Aplicacion.Interfaces.IQuerys;
+using _3_Aplicacion.Interfaces.ICommands;
+using _3_Aplicacion.UseCase;
 using _4_Dominio;
+using _1_ConsoleApp.Menu;
+using _3_Aplicacion.Interfaces.IServices;
 
+
+//nuevas correciones de chatgpt
 using var context = new ProyectosContext(new DbContextOptions<ProyectosContext>());
 
-Servicio_Usuarios usuario = new Servicio_Usuarios(context);
-Servicio_Proyectos proyecto = new Servicio_Proyectos(context);
-Servicio_Aprobacion_Proyectos  aprobacion = new Servicio_Aprobacion_Proyectos(context);
 
-User? usuarioActivo = null;
+IAprobacionQuerys aprobacionQ = new AprobacionQuerys(context);
+IProyectoQuerys proyectoQ = new ProyectoQuerys(context);
+IUsuarioQuerys usuarioQ = new UsuarioQuerys(context);
+IRolQuerys rolQ = new RolQuerys(context);
+IAreaQuerys areaQ = new AreaQuerys(context);
+ITypeQuerys typeQ = new TypeQuerys(context);
 
+IAprobacionCommands aprobacionC = new AprobacionCommands(context);
+IProyectoCommands proyectoC = new ProyectoCommands(context);
+IUsuarioCommands usuarioC = new UsuarioCommands(context);
+
+
+IFlujoAprobacionGenerator flujo = new FlujoAprobacionGenerator(aprobacionQ);
+IServicioUsuario usuario = new ServicioUsuarios(usuarioQ, usuarioC, rolQ);
+IServicioProyectos proyecto = new ServicioProyectos(proyectoQ, proyectoC, flujo, aprobacionC, areaQ, typeQ);
+IServicioAprobacionProyectos aprobacion = new ServicioAprobacionProyectos(aprobacionQ, aprobacionC);
+
+
+var menuInicio = new MenuInicio(usuario);
+var menuPrincipal = new MenuPrincipal(proyecto, aprobacion, usuario);
+
+// Bucle general
 while (true)
 {
-    Console.Clear();
-    if (usuarioActivo == null)
+    try
     {
-        Console.ForegroundColor = ConsoleColor.Yellow;
-        Console.WriteLine("===== Inicio de Sesión =====");
-        usuarioActivo = usuario.Login();
-
-        if (usuarioActivo == null)
-        {
-            Console.WriteLine("Presione una tecla para volver a intentar...");
-            Console.ReadKey();
-            continue;
-        }
+        var usuarioActivo = await menuInicio.Mostrar();
+        await menuPrincipal.Mostrar(usuarioActivo);
     }
-
-    Console.Clear();
-    Console.ForegroundColor = ConsoleColor.White;
-    Console.WriteLine($"Usuario activo: {usuarioActivo.Name}");
-    Console.WriteLine("________________________________________________");
-    Console.WriteLine("Ingrese el N° de la opción que desea usar:");
-    Console.WriteLine("________________________________________________");
-    Console.WriteLine("1 - Crear propuesta de proyecto");
-    Console.WriteLine("2 - Ver mis propuestas y su flujo de aprobación");
-    Console.WriteLine("3 - Aprobar/Rechazar proyectos pendientes");
-    Console.WriteLine("4 - Cambiar de usuario");
-    Console.WriteLine("5 - Salir");
-    Console.WriteLine("________________________________________________");
-    Console.Write("N°: ");
-    string opcion = Console.ReadLine();
-    Console.WriteLine("________________________________________________");
-    Console.Clear();
-
-    switch (opcion)
+    catch (Exception ex)
     {
-        case "1":
-            proyecto.CrearPropuesta(usuarioActivo);
-            break;
-        case "2":
-            proyecto.VerMisPropuestas(usuarioActivo);
-            break;
-        case "3":
-            aprobacion.AprobarPropuestasPendientes(usuarioActivo);
-            break;
-        case "4":
-            usuarioActivo = null;
-            break;
-        case "5":
-            Console.WriteLine("Gracias por usar el programa.");
-            Console.ReadKey();
-            return;
-        default:
-            Console.ForegroundColor = ConsoleColor.Red;
-            Console.WriteLine("Ingresaste un número erróneo, vuelva a intentarlo.\n\n");
-            break;
+        Console.ForegroundColor = ConsoleColor.Red;
+        Console.WriteLine($"Error inesperado global: {ex.Message}");
+        Console.ResetColor();
+        Console.WriteLine("Presiona una tecla para continuar...");
+        Console.ReadKey();
     }
-
-    Console.ForegroundColor = ConsoleColor.White;
-    Console.Write("Presiona Enter para continuar . . . ");
-    Console.ReadKey(true);
 }

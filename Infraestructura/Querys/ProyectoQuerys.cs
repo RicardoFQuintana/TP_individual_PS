@@ -27,7 +27,14 @@ namespace _2_Infraestructura.Querys
                              .FirstOrDefaultAsync(p => p.Id == propuestaId);
             return propuesta;
         }
-
+        public async Task<List<ProjectApprovalStep>> ObtenerPasosPorPropuestaAsync(Guid propuestaId)
+        {
+            return await _context.ProjectApprovalSteps
+                .Where(p => p.ProjectProposal_ID == propuestaId)
+                .Include(p => p.Status)
+                .OrderBy(p => p.StepOrder)
+                .ToListAsync();
+        }
         public async Task<List<ProjectProposal>> ObtenerPropuestasDeUsuarioAsync(int userId)
         {
             return await _context.ProjectProposals
@@ -36,6 +43,17 @@ namespace _2_Infraestructura.Querys
                          .Include(p => p.Type)
                          .Include(p => p.Status)
                          .ToListAsync();
+        }
+
+        public async Task<List<ProjectApprovalStep>> ObtenerPasosDePropuestasAsync(List<ProjectProposal> propuestas)
+        {
+            return await _context.ProjectApprovalSteps
+                .Include(pas => pas.ApproverUser)
+                .Include(pas => pas.ApproverRole)
+                .Include(pas => pas.Status)
+                .Where(pas => propuestas.Select(p => p.Id).Contains(pas.ProjectProposal_ID))
+                .OrderBy(pas => pas.StepOrder)
+                .ToListAsync();
         }
     }
 }

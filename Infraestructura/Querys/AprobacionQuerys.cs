@@ -44,5 +44,16 @@ namespace _2_Infraestructura.Querys
                     usuario.Role_ID == p.ApproverRole_ID)
                 .ToListAsync();
         }
+
+        public async Task<List<ApprovalRule>> ObtenerReglasAplicablesAsync(ProjectProposal propuesta)
+        {
+            return await _context.ApprovalRules
+                .Where(r =>
+                    (r.Area_ID == null || r.Area_ID == propuesta.Area_ID) &&
+                    (r.Type_ID == null || r.Type_ID == propuesta.Type_ID) &&
+                    propuesta.EstimatedAmount >= r.MinAmount &&
+                    propuesta.EstimatedAmount <= r.MaxAmount)
+                .ToListAsync();
+        }
     }
 }

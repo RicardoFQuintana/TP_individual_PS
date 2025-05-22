@@ -11,5 +11,6 @@ namespace _3_Aplicacion.Interfaces.IQuerys
     {
         Task<List<ProjectApprovalStep>> ObtenerPasosPorPropuestaAsync(Guid propuestaId);
         Task<List<ProjectApprovalStep>> ObtenerPasosPendientesPorUsuarioAsync(User usuario);
+        Task<List<ApprovalRule>> ObtenerReglasAplicablesAsync(ProjectProposal propuesta);
     }
 }
