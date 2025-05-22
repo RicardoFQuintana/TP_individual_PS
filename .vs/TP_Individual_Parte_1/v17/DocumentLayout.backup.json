@@ -3,16 +3,8 @@
   "WorkspaceRootPath": "E:\\UNAJ\\Proyecto software\\TP_Individual_Parte_1\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{44E33E54-1C50-429E-9C43-54D8CEC2BCDF}|Infraestructura\\2_Infraestructura.csproj|e:\\unaj\\proyecto software\\tp_individual_parte_1\\infraestructura\\persistence\\proyectoscontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{44E33E54-1C50-429E-9C43-54D8CEC2BCDF}|Infraestructura\\2_Infraestructura.csproj|solutionrelative:infraestructura\\persistence\\proyectoscontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{44E33E54-1C50-429E-9C43-54D8CEC2BCDF}|Infraestructura\\2_Infraestructura.csproj|e:\\unaj\\proyecto software\\tp_individual_parte_1\\infraestructura\\commands\\proyectocommands.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{44E33E54-1C50-429E-9C43-54D8CEC2BCDF}|Infraestructura\\2_Infraestructura.csproj|solutionrelative:infraestructura\\commands\\proyectocommands.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A228EF75-94A8-4C93-A880-FEEBA0EDC103}|Aplicacion\\3_Aplicacion.csproj|e:\\unaj\\proyecto software\\tp_individual_parte_1\\aplicacion\\interfaces\\icommands\\iproyectocommands.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A228EF75-94A8-4C93-A880-FEEBA0EDC103}|Aplicacion\\3_Aplicacion.csproj|solutionrelative:aplicacion\\interfaces\\icommands\\iproyectocommands.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{B42360FB-5F8C-4252-AD16-0E3D7EC84B9B}|ConsoleApp1\\1_ConsoleApp.csproj|e:\\unaj\\proyecto software\\tp_individual_parte_1\\consoleapp1\\menu\\menuprincipal.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B42360FB-5F8C-4252-AD16-0E3D7EC84B9B}|ConsoleApp1\\1_ConsoleApp.csproj|solutionrelative:consoleapp1\\menu\\menuprincipal.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -27,40 +19,14 @@
             {
               "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "ProyectosContext.cs",
-              "DocumentMoniker": "E:\\UNAJ\\Proyecto software\\TP_Individual_Parte_1\\Infraestructura\\Persistence\\ProyectosContext.cs",
-              "RelativeDocumentMoniker": "Infraestructura\\Persistence\\ProyectosContext.cs",
-              "ToolTip": "E:\\UNAJ\\Proyecto software\\TP_Individual_Parte_1\\Infraestructura\\Persistence\\ProyectosContext.cs",
-              "RelativeToolTip": "Infraestructura\\Persistence\\ProyectosContext.cs",
-              "ViewState": "AgIAABoAAAAAAAAAAAA8wAAAAAAAAAAAAAAAAA==",
+              "Title": "MenuPrincipal.cs",
+              "DocumentMoniker": "E:\\UNAJ\\Proyecto software\\TP_Individual_Parte_1\\ConsoleApp1\\Menu\\MenuPrincipal.cs",
+              "RelativeDocumentMoniker": "ConsoleApp1\\Menu\\MenuPrincipal.cs",
+              "ToolTip": "E:\\UNAJ\\Proyecto software\\TP_Individual_Parte_1\\ConsoleApp1\\Menu\\MenuPrincipal.cs",
+              "RelativeToolTip": "ConsoleApp1\\Menu\\MenuPrincipal.cs",
+              "ViewState": "AgIAAA0AAAAAAAAAAAAswOsAAABEAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-18T09:55:30.746Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "IProyectoCommands.cs",
-              "DocumentMoniker": "E:\\UNAJ\\Proyecto software\\TP_Individual_Parte_1\\Aplicacion\\Interfaces\\ICommands\\IProyectoCommands.cs",
-              "RelativeDocumentMoniker": "Aplicacion\\Interfaces\\ICommands\\IProyectoCommands.cs",
-              "ToolTip": "E:\\UNAJ\\Proyecto software\\TP_Individual_Parte_1\\Aplicacion\\Interfaces\\ICommands\\IProyectoCommands.cs",
-              "RelativeToolTip": "Aplicacion\\Interfaces\\ICommands\\IProyectoCommands.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-18T07:24:03Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "ProyectoCommands.cs",
-              "DocumentMoniker": "E:\\UNAJ\\Proyecto software\\TP_Individual_Parte_1\\Infraestructura\\Commands\\ProyectoCommands.cs",
-              "RelativeDocumentMoniker": "Infraestructura\\Commands\\ProyectoCommands.cs",
-              "ToolTip": "E:\\UNAJ\\Proyecto software\\TP_Individual_Parte_1\\Infraestructura\\Commands\\ProyectoCommands.cs",
-              "RelativeToolTip": "Infraestructura\\Commands\\ProyectoCommands.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAARAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-18T07:25:29.992Z",
+              "WhenOpened": "2025-05-19T08:38:00.12Z",
               "EditorCaption": ""
             }
           ]

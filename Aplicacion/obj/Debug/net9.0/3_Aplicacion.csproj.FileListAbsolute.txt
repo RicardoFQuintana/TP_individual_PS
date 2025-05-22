@@ -4,3 +4,15 @@ E:\UNAJ\Proyecto software\TP_Individual_Parte_1\Aplicacion\obj\Debug\net9.0\3_Ap
 E:\UNAJ\Proyecto software\TP_Individual_Parte_1\Aplicacion\obj\Debug\net9.0\3_Aplicacion.AssemblyInfo.cs
 E:\UNAJ\Proyecto software\TP_Individual_Parte_1\Aplicacion\obj\Debug\net9.0\3_Aplicacion.csproj.CoreCompileInputs.cache
 E:\UNAJ\Proyecto software\TP_Individual_Parte_1\Aplicacion\obj\Debug\net9.0\3_Aplicacion.sourcelink.json
+E:\UNAJ\Proyecto software\TP_Individual_Parte_1\Aplicacion\bin\Debug\net9.0\3_Aplicacion.deps.json
+E:\UNAJ\Proyecto software\TP_Individual_Parte_1\Aplicacion\bin\Debug\net9.0\3_Aplicacion.runtimeconfig.json
+E:\UNAJ\Proyecto software\TP_Individual_Parte_1\Aplicacion\bin\Debug\net9.0\3_Aplicacion.dll
+E:\UNAJ\Proyecto software\TP_Individual_Parte_1\Aplicacion\bin\Debug\net9.0\3_Aplicacion.pdb
+E:\UNAJ\Proyecto software\TP_Individual_Parte_1\Aplicacion\bin\Debug\net9.0\4_Dominio.dll
+E:\UNAJ\Proyecto software\TP_Individual_Parte_1\Aplicacion\bin\Debug\net9.0\4_Dominio.pdb
+E:\UNAJ\Proyecto software\TP_Individual_Parte_1\Aplicacion\obj\Debug\net9.0\3_Aplica.CAAAC6F3.Up2Date
+E:\UNAJ\Proyecto software\TP_Individual_Parte_1\Aplicacion\obj\Debug\net9.0\3_Aplicacion.dll
+E:\UNAJ\Proyecto software\TP_Individual_Parte_1\Aplicacion\obj\Debug\net9.0\refint\3_Aplicacion.dll
+E:\UNAJ\Proyecto software\TP_Individual_Parte_1\Aplicacion\obj\Debug\net9.0\3_Aplicacion.pdb
+E:\UNAJ\Proyecto software\TP_Individual_Parte_1\Aplicacion\obj\Debug\net9.0\3_Aplicacion.genruntimeconfig.cache
+E:\UNAJ\Proyecto software\TP_Individual_Parte_1\Aplicacion\obj\Debug\net9.0\ref\3_Aplicacion.dll
