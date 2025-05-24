@@ -10,8 +10,6 @@ using _4_Dominio;
 using _1_ConsoleApp.Menu;
 using _3_Aplicacion.Interfaces.IServices;
 
-
-//nuevas correciones de chatgpt
 using var context = new ProyectosContext(new DbContextOptions<ProyectosContext>());
 
 
@@ -29,7 +27,7 @@ IUsuarioCommands usuarioC = new UsuarioCommands(context);
 
 IFlujoAprobacionGenerator flujo = new FlujoAprobacionGenerator(aprobacionQ);
 IServicioUsuario usuario = new ServicioUsuarios(usuarioQ, usuarioC, rolQ);
-IServicioProyectos proyecto = new ServicioProyectos(proyectoQ, proyectoC, flujo, aprobacionC, areaQ, typeQ);
+IServicioProyectos proyecto = new ServicioProyectos(proyectoQ, proyectoC, flujo, aprobacionC, aprobacionQ, areaQ, typeQ);
 IServicioAprobacionProyectos aprobacion = new ServicioAprobacionProyectos(aprobacionQ, aprobacionC);
 
 

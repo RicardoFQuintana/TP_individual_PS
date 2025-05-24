@@ -1,9 +1,3 @@
-E:\UNAJ\Proyecto software\TP_Individual_Parte_1\Infraestructura\obj\Debug\net9.0\2_Infraestructura.csproj.AssemblyReference.cache
-E:\UNAJ\Proyecto software\TP_Individual_Parte_1\Infraestructura\obj\Debug\net9.0\2_Infraestructura.GeneratedMSBuildEditorConfig.editorconfig
-E:\UNAJ\Proyecto software\TP_Individual_Parte_1\Infraestructura\obj\Debug\net9.0\2_Infraestructura.AssemblyInfoInputs.cache
-E:\UNAJ\Proyecto software\TP_Individual_Parte_1\Infraestructura\obj\Debug\net9.0\2_Infraestructura.AssemblyInfo.cs
-E:\UNAJ\Proyecto software\TP_Individual_Parte_1\Infraestructura\obj\Debug\net9.0\2_Infraestructura.csproj.CoreCompileInputs.cache
-E:\UNAJ\Proyecto software\TP_Individual_Parte_1\Infraestructura\obj\Debug\net9.0\2_Infraestructura.sourcelink.json
 E:\UNAJ\Proyecto software\TP_Individual_Parte_1\Infraestructura\bin\Debug\net9.0\2_Infraestructura.deps.json
 E:\UNAJ\Proyecto software\TP_Individual_Parte_1\Infraestructura\bin\Debug\net9.0\2_Infraestructura.runtimeconfig.json
 E:\UNAJ\Proyecto software\TP_Individual_Parte_1\Infraestructura\bin\Debug\net9.0\2_Infraestructura.dll
@@ -12,6 +6,12 @@ E:\UNAJ\Proyecto software\TP_Individual_Parte_1\Infraestructura\bin\Debug\net9.0
 E:\UNAJ\Proyecto software\TP_Individual_Parte_1\Infraestructura\bin\Debug\net9.0\4_Dominio.dll
 E:\UNAJ\Proyecto software\TP_Individual_Parte_1\Infraestructura\bin\Debug\net9.0\3_Aplicacion.pdb
 E:\UNAJ\Proyecto software\TP_Individual_Parte_1\Infraestructura\bin\Debug\net9.0\4_Dominio.pdb
+E:\UNAJ\Proyecto software\TP_Individual_Parte_1\Infraestructura\obj\Debug\net9.0\2_Infraestructura.csproj.AssemblyReference.cache
+E:\UNAJ\Proyecto software\TP_Individual_Parte_1\Infraestructura\obj\Debug\net9.0\2_Infraestructura.GeneratedMSBuildEditorConfig.editorconfig
+E:\UNAJ\Proyecto software\TP_Individual_Parte_1\Infraestructura\obj\Debug\net9.0\2_Infraestructura.AssemblyInfoInputs.cache
+E:\UNAJ\Proyecto software\TP_Individual_Parte_1\Infraestructura\obj\Debug\net9.0\2_Infraestructura.AssemblyInfo.cs
+E:\UNAJ\Proyecto software\TP_Individual_Parte_1\Infraestructura\obj\Debug\net9.0\2_Infraestructura.csproj.CoreCompileInputs.cache
+E:\UNAJ\Proyecto software\TP_Individual_Parte_1\Infraestructura\obj\Debug\net9.0\2_Infraestructura.sourcelink.json
 E:\UNAJ\Proyecto software\TP_Individual_Parte_1\Infraestructura\obj\Debug\net9.0\2_Infrae.804A34C0.Up2Date
 E:\UNAJ\Proyecto software\TP_Individual_Parte_1\Infraestructura\obj\Debug\net9.0\2_Infraestructura.dll
 E:\UNAJ\Proyecto software\TP_Individual_Parte_1\Infraestructura\obj\Debug\net9.0\refint\2_Infraestructura.dll

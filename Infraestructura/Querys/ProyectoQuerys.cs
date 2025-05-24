@@ -18,6 +18,14 @@ namespace _2_Infraestructura.Querys
             _context = context;
         }
 
+        public async Task<List<ProjectProposal>> ObtenerTodosPropuestasAsync()
+        {
+            return await _context.ProjectProposals
+                .Include(p => p.Area)
+                .Include(p => p.Type)
+                .Include(p => p.Status)
+                .ToListAsync();
+        }
         public async Task<ProjectProposal?> ObtenerPropuestaPorIdAsync(Guid propuestaId)
         {
             var propuesta = await _context.ProjectProposals
@@ -44,7 +52,6 @@ namespace _2_Infraestructura.Querys
                          .Include(p => p.Status)
                          .ToListAsync();
         }
-
         public async Task<List<ProjectApprovalStep>> ObtenerPasosDePropuestasAsync(List<ProjectProposal> propuestas)
         {
             return await _context.ProjectApprovalSteps
@@ -54,6 +61,11 @@ namespace _2_Infraestructura.Querys
                 .Where(pas => propuestas.Select(p => p.Id).Contains(pas.ProjectProposal_ID))
                 .OrderBy(pas => pas.StepOrder)
                 .ToListAsync();
+        }
+        public async Task<bool> ExisteTituloAsync(string Title)
+        {
+            return await _context.ProjectProposals
+                .AnyAsync(p => p.Title.ToLower() == Title.ToLower());
         }
     }
 }

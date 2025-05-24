@@ -3,8 +3,36 @@
   "WorkspaceRootPath": "E:\\UNAJ\\Proyecto software\\TP_Individual_Parte_1\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{B42360FB-5F8C-4252-AD16-0E3D7EC84B9B}|ConsoleApp1\\1_ConsoleApp.csproj|e:\\unaj\\proyecto software\\tp_individual_parte_1\\consoleapp1\\menu\\menuprincipal.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{B42360FB-5F8C-4252-AD16-0E3D7EC84B9B}|ConsoleApp1\\1_ConsoleApp.csproj|solutionrelative:consoleapp1\\menu\\menuprincipal.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{A228EF75-94A8-4C93-A880-FEEBA0EDC103}|Aplicacion\\3_Aplicacion.csproj|e:\\unaj\\proyecto software\\tp_individual_parte_1\\aplicacion\\usecase\\servicioproyectos.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A228EF75-94A8-4C93-A880-FEEBA0EDC103}|Aplicacion\\3_Aplicacion.csproj|solutionrelative:aplicacion\\usecase\\servicioproyectos.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B42360FB-5F8C-4252-AD16-0E3D7EC84B9B}|ConsoleApp1\\1_ConsoleApp.csproj|e:\\unaj\\proyecto software\\tp_individual_parte_1\\consoleapp1\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B42360FB-5F8C-4252-AD16-0E3D7EC84B9B}|ConsoleApp1\\1_ConsoleApp.csproj|solutionrelative:consoleapp1\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{44E33E54-1C50-429E-9C43-54D8CEC2BCDF}|Infraestructura\\2_Infraestructura.csproj|e:\\unaj\\proyecto software\\tp_individual_parte_1\\infraestructura\\querys\\aprobacionquerys.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{44E33E54-1C50-429E-9C43-54D8CEC2BCDF}|Infraestructura\\2_Infraestructura.csproj|solutionrelative:infraestructura\\querys\\aprobacionquerys.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A228EF75-94A8-4C93-A880-FEEBA0EDC103}|Aplicacion\\3_Aplicacion.csproj|e:\\unaj\\proyecto software\\tp_individual_parte_1\\aplicacion\\interfaces\\iquerys\\iaprobacionquerys.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A228EF75-94A8-4C93-A880-FEEBA0EDC103}|Aplicacion\\3_Aplicacion.csproj|solutionrelative:aplicacion\\interfaces\\iquerys\\iaprobacionquerys.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{44E33E54-1C50-429E-9C43-54D8CEC2BCDF}|Infraestructura\\2_Infraestructura.csproj|e:\\unaj\\proyecto software\\tp_individual_parte_1\\infraestructura\\querys\\proyectoquerys.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{44E33E54-1C50-429E-9C43-54D8CEC2BCDF}|Infraestructura\\2_Infraestructura.csproj|solutionrelative:infraestructura\\querys\\proyectoquerys.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A228EF75-94A8-4C93-A880-FEEBA0EDC103}|Aplicacion\\3_Aplicacion.csproj|e:\\unaj\\proyecto software\\tp_individual_parte_1\\aplicacion\\interfaces\\iquerys\\iproyectoquerys.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A228EF75-94A8-4C93-A880-FEEBA0EDC103}|Aplicacion\\3_Aplicacion.csproj|solutionrelative:aplicacion\\interfaces\\iquerys\\iproyectoquerys.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A228EF75-94A8-4C93-A880-FEEBA0EDC103}|Aplicacion\\3_Aplicacion.csproj|e:\\unaj\\proyecto software\\tp_individual_parte_1\\aplicacion\\interfaces\\iservices\\iservicioproyectos.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A228EF75-94A8-4C93-A880-FEEBA0EDC103}|Aplicacion\\3_Aplicacion.csproj|solutionrelative:aplicacion\\interfaces\\iservices\\iservicioproyectos.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{44E33E54-1C50-429E-9C43-54D8CEC2BCDF}|Infraestructura\\2_Infraestructura.csproj|e:\\unaj\\proyecto software\\tp_individual_parte_1\\infraestructura\\commands\\proyectocommands.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{44E33E54-1C50-429E-9C43-54D8CEC2BCDF}|Infraestructura\\2_Infraestructura.csproj|solutionrelative:infraestructura\\commands\\proyectocommands.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -14,19 +42,110 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 0,
+          "SelectedChildIndex": 6,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "MenuPrincipal.cs",
-              "DocumentMoniker": "E:\\UNAJ\\Proyecto software\\TP_Individual_Parte_1\\ConsoleApp1\\Menu\\MenuPrincipal.cs",
-              "RelativeDocumentMoniker": "ConsoleApp1\\Menu\\MenuPrincipal.cs",
-              "ToolTip": "E:\\UNAJ\\Proyecto software\\TP_Individual_Parte_1\\ConsoleApp1\\Menu\\MenuPrincipal.cs",
-              "RelativeToolTip": "ConsoleApp1\\Menu\\MenuPrincipal.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAOsAAABEAAAAAAAAAA==",
+              "DocumentIndex": 3,
+              "Title": "IAprobacionQuerys.cs",
+              "DocumentMoniker": "E:\\UNAJ\\Proyecto software\\TP_Individual_Parte_1\\Aplicacion\\Interfaces\\IQuerys\\IAprobacionQuerys.cs",
+              "RelativeDocumentMoniker": "Aplicacion\\Interfaces\\IQuerys\\IAprobacionQuerys.cs",
+              "ToolTip": "E:\\UNAJ\\Proyecto software\\TP_Individual_Parte_1\\Aplicacion\\Interfaces\\IQuerys\\IAprobacionQuerys.cs",
+              "RelativeToolTip": "Aplicacion\\Interfaces\\IQuerys\\IAprobacionQuerys.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAABQAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-19T08:38:00.12Z",
+              "WhenOpened": "2025-05-24T09:52:01.26Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "AprobacionQuerys.cs",
+              "DocumentMoniker": "E:\\UNAJ\\Proyecto software\\TP_Individual_Parte_1\\Infraestructura\\Querys\\AprobacionQuerys.cs",
+              "RelativeDocumentMoniker": "Infraestructura\\Querys\\AprobacionQuerys.cs",
+              "ToolTip": "E:\\UNAJ\\Proyecto software\\TP_Individual_Parte_1\\Infraestructura\\Querys\\AprobacionQuerys.cs",
+              "RelativeToolTip": "Infraestructura\\Querys\\AprobacionQuerys.cs",
+              "ViewState": "AgIAABgAAAAAAAAAAAAowDkAAABcAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-24T09:48:28.28Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "ProyectoCommands.cs",
+              "DocumentMoniker": "E:\\UNAJ\\Proyecto software\\TP_Individual_Parte_1\\Infraestructura\\Commands\\ProyectoCommands.cs",
+              "RelativeDocumentMoniker": "Infraestructura\\Commands\\ProyectoCommands.cs",
+              "ToolTip": "E:\\UNAJ\\Proyecto software\\TP_Individual_Parte_1\\Infraestructura\\Commands\\ProyectoCommands.cs",
+              "RelativeToolTip": "Infraestructura\\Commands\\ProyectoCommands.cs",
+              "ViewState": "AgIAAAYAAAAAAAAAAAAAAAwAAAAzAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-24T09:25:33.399Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "ProyectoQuerys.cs",
+              "DocumentMoniker": "E:\\UNAJ\\Proyecto software\\TP_Individual_Parte_1\\Infraestructura\\Querys\\ProyectoQuerys.cs",
+              "RelativeDocumentMoniker": "Infraestructura\\Querys\\ProyectoQuerys.cs",
+              "ToolTip": "E:\\UNAJ\\Proyecto software\\TP_Individual_Parte_1\\Infraestructura\\Querys\\ProyectoQuerys.cs",
+              "RelativeToolTip": "Infraestructura\\Querys\\ProyectoQuerys.cs",
+              "ViewState": "AgIAAAQAAAAAAAAAAADgvxkAAAAnAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-24T07:51:16.001Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "IServicioProyectos.cs",
+              "DocumentMoniker": "E:\\UNAJ\\Proyecto software\\TP_Individual_Parte_1\\Aplicacion\\Interfaces\\IServices\\IServicioProyectos.cs",
+              "RelativeDocumentMoniker": "Aplicacion\\Interfaces\\IServices\\IServicioProyectos.cs",
+              "ToolTip": "E:\\UNAJ\\Proyecto software\\TP_Individual_Parte_1\\Aplicacion\\Interfaces\\IServices\\IServicioProyectos.cs",
+              "RelativeToolTip": "Aplicacion\\Interfaces\\IServices\\IServicioProyectos.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABYAAACGAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-24T07:47:37.986Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "IProyectoQuerys.cs",
+              "DocumentMoniker": "E:\\UNAJ\\Proyecto software\\TP_Individual_Parte_1\\Aplicacion\\Interfaces\\IQuerys\\IProyectoQuerys.cs",
+              "RelativeDocumentMoniker": "Aplicacion\\Interfaces\\IQuerys\\IProyectoQuerys.cs",
+              "ToolTip": "E:\\UNAJ\\Proyecto software\\TP_Individual_Parte_1\\Aplicacion\\Interfaces\\IQuerys\\IProyectoQuerys.cs",
+              "RelativeToolTip": "Aplicacion\\Interfaces\\IQuerys\\IProyectoQuerys.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAABCAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-24T07:47:31.807Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "ServicioProyectos.cs",
+              "DocumentMoniker": "E:\\UNAJ\\Proyecto software\\TP_Individual_Parte_1\\Aplicacion\\UseCase\\ServicioProyectos.cs",
+              "RelativeDocumentMoniker": "Aplicacion\\UseCase\\ServicioProyectos.cs",
+              "ToolTip": "E:\\UNAJ\\Proyecto software\\TP_Individual_Parte_1\\Aplicacion\\UseCase\\ServicioProyectos.cs",
+              "RelativeToolTip": "Aplicacion\\UseCase\\ServicioProyectos.cs",
+              "ViewState": "AgIAAG4AAAAAAAAAAAASwIUAAABPAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-23T23:13:20.538Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Program.cs",
+              "DocumentMoniker": "E:\\UNAJ\\Proyecto software\\TP_Individual_Parte_1\\ConsoleApp1\\Program.cs",
+              "RelativeDocumentMoniker": "ConsoleApp1\\Program.cs",
+              "ToolTip": "E:\\UNAJ\\Proyecto software\\TP_Individual_Parte_1\\ConsoleApp1\\Program.cs",
+              "RelativeToolTip": "ConsoleApp1\\Program.cs",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAAAB0AAABpAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-23T08:14:32.693Z",
               "EditorCaption": ""
             }
           ]
