@@ -21,5 +21,7 @@ namespace _3_Aplicacion.Dto
         public decimal EstimatedAmount { get; set; }
 
         public int EstimatedDuration { get; set; }
+
+        public int CreateBy_ID { get; set; }
     }
 }

@@ -210,12 +210,13 @@ namespace _1_ConsoleApp.Menu
                     Area_ID = areaSeleccionada.id,
                     Type_ID = tipoSeleccionado.id,
                     EstimatedAmount = monto,
-                    EstimatedDuration = duracion
+                    EstimatedDuration = duracion,
+                    CreateBy_ID = usuario.id,
                 };
 
                 try
                 {
-                    await _servicioProyectos.CrearPropuesta(dto, usuario);
+                    await _servicioProyectos.CrearPropuesta(dto);
                     Console.ForegroundColor = ConsoleColor.Green;
                     Console.WriteLine("\n Propuesta creada exitosamente.");
                 }

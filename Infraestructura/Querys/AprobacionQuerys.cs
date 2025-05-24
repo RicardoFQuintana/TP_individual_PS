@@ -55,5 +55,12 @@ namespace _2_Infraestructura.Querys
                     propuesta.EstimatedAmount <= r.MaxAmount)
                 .ToListAsync();
         }
+        public async Task<List<ProjectApprovalStep>> ObtenerPasosPorUsuarioAsync(int userId)
+        {
+            return await _context.ProjectApprovalSteps
+                .Include(p => p.ProjectProposal)
+                .Where(p => p.ApproverUser_ID == userId)
+                .ToListAsync();
+        }
     }
 }
