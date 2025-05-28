@@ -21,7 +21,7 @@ namespace _2_Infraestructura.Querys
         public async Task<List<ProjectApprovalStep>> ObtenerPasosPorPropuestaAsync(Guid propuestaId)
         {
             return await _context.ProjectApprovalSteps
-                         .Where(p => p.ProjectProposal_ID == propuestaId)
+                         .Where(p => p.ProjectProposalId == propuestaId)
                          .Include(p => p.ApproverUser)
                          .Include(p => p.ApproverRole)
                          .Include(p => p.Status)
@@ -39,9 +39,9 @@ namespace _2_Infraestructura.Querys
                 .Include(p => p.ApproverRole)
                 .Include(p => p.Status)
                 .Where(p =>
-                    p.Status_ID == 1 && // Pendiente
-                    (p.ApproverUser_ID == null || p.ApproverUser_ID == usuario.id) &&
-                    usuario.Role_ID == p.ApproverRole_ID)
+                    p.StatusId == 1 && // Pendiente
+                    (p.ApproverUserId == null || p.ApproverUserId == usuario.Id) &&
+                    usuario.RoleId == p.ApproverRoleId)
                 .ToListAsync();
         }
 
@@ -49,8 +49,8 @@ namespace _2_Infraestructura.Querys
         {
             return await _context.ApprovalRules
                 .Where(r =>
-                    (r.Area_ID == null || r.Area_ID == propuesta.Area_ID) &&
-                    (r.Type_ID == null || r.Type_ID == propuesta.Type_ID) &&
+                    (r.AreaId == null || r.AreaId == propuesta.AreaId) &&
+                    (r.TypeId == null || r.TypeId == propuesta.TypeId) &&
                     propuesta.EstimatedAmount >= r.MinAmount &&
                     propuesta.EstimatedAmount <= r.MaxAmount)
                 .ToListAsync();
@@ -59,7 +59,7 @@ namespace _2_Infraestructura.Querys
         {
             return await _context.ProjectApprovalSteps
                 .Include(p => p.ProjectProposal)
-                .Where(p => p.ApproverUser_ID == userId)
+                .Where(p => p.ApproverUserId == userId)
                 .ToListAsync();
         }
     }

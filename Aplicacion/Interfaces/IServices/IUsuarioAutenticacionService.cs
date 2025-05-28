@@ -7,11 +7,8 @@ using _4_Dominio;
 
 namespace _3_Aplicacion.Interfaces.IServices
 {
-    public interface IServicioUsuario
+    public interface IUsuarioAutenticacionService
     {
         Task<User?> Login(int id);
-        Task<List<User>> MostrarUsuarios();
-        Task<User> RegistrarUsuario(string nombre, string email, int roleId);
-        Task<List<ApproverRole>> ObtenerRolesDisponibles();
     }
 }

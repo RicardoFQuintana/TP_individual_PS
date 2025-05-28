@@ -29,23 +29,23 @@ namespace _3_Aplicacion.UseCase
         public List<ProjectApprovalStep> ObtenerPasosFiltrados(List<ProjectApprovalStep> Pasos)
         {
             var pasosFiltrados = Pasos
-                .Where(p => p.ApproverUser_ID == null)
-                .GroupBy(p => p.ProjectProposal_ID)
+                .Where(p => p.ApproverUserId == null)
+                .GroupBy(p => p.ProjectProposalId)
                 .Select(g => g.OrderBy(p => p.StepOrder).First())
                 .ToList();
             return pasosFiltrados;
         }
-        public async Task<bool> AprobarPaso(long pasoId, int usuarioId)
+        public async Task<bool> AprobarPaso(long pasoId, int usuarioId, string observacion)
         {
-            return await _aprobacionC.AprobarPasoAsync(pasoId, usuarioId);
+            return await _aprobacionC.AprobarPasoAsync(pasoId, usuarioId, observacion);
         }
-        public async Task<bool> RechazarPaso(long pasoId, int usuarioId)
+        public async Task<bool> RechazarPaso(long pasoId, int usuarioId, string observacion)
         {
-            return await _aprobacionC.RechazarPasoAsync(pasoId, usuarioId);
+            return await _aprobacionC.RechazarPasoAsync(pasoId, usuarioId, observacion);
         }
-        public async Task<bool> ObservarPaso(long pasoId, int usuarioId)
+        public async Task<bool> ObservarPaso(long pasoId, int usuarioId, string observacion)
         {
-            return await _aprobacionC.ObservarPasoAsync(pasoId, usuarioId);
+            return await _aprobacionC.ObservarPasoAsync(pasoId, usuarioId, observacion);
         }
     }
 }

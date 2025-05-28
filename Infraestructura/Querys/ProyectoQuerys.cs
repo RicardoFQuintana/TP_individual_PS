@@ -20,11 +20,13 @@ namespace _2_Infraestructura.Querys
 
         public async Task<List<ProjectProposal>> ObtenerTodosPropuestasAsync()
         {
-            return await _context.ProjectProposals
+             var propuestas = await _context.ProjectProposals
                 .Include(p => p.Area)
                 .Include(p => p.Type)
                 .Include(p => p.Status)
                 .ToListAsync();
+            return propuestas;
+
         }
         public async Task<ProjectProposal?> ObtenerPropuestaPorIdAsync(Guid propuestaId)
         {
@@ -38,7 +40,7 @@ namespace _2_Infraestructura.Querys
         public async Task<List<ProjectApprovalStep>> ObtenerPasosPorPropuestaAsync(Guid propuestaId)
         {
             return await _context.ProjectApprovalSteps
-                .Where(p => p.ProjectProposal_ID == propuestaId)
+                .Where(p => p.ProjectProposalId == propuestaId)
                 .Include(p => p.Status)
                 .OrderBy(p => p.StepOrder)
                 .ToListAsync();
@@ -46,7 +48,7 @@ namespace _2_Infraestructura.Querys
         public async Task<List<ProjectProposal>> ObtenerPropuestasDeUsuarioAsync(int userId)
         {
             return await _context.ProjectProposals
-                         .Where(p => p.CreateBy_ID == userId)
+                         .Where(p => p.CreateById == userId)
                          .Include(p => p.Area)
                          .Include(p => p.Type)
                          .Include(p => p.Status)
@@ -58,7 +60,7 @@ namespace _2_Infraestructura.Querys
                 .Include(pas => pas.ApproverUser)
                 .Include(pas => pas.ApproverRole)
                 .Include(pas => pas.Status)
-                .Where(pas => propuestas.Select(p => p.Id).Contains(pas.ProjectProposal_ID))
+                .Where(pas => propuestas.Select(p => p.Id).Contains(pas.ProjectProposalId))
                 .OrderBy(pas => pas.StepOrder)
                 .ToListAsync();
         }

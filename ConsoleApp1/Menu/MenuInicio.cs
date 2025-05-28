@@ -11,11 +11,17 @@ namespace _1_ConsoleApp.Menu
 {
     public class MenuInicio
     {
-        private readonly IServicioUsuario _servicioUsuarios;
+        IUsuarioAutenticacionService _userAS;
+        IUsuarioRegistroService _userRS;
+        IUsuarioConsultaService _userCS;
+        IRolConsultaService _rolCS;
 
-        public MenuInicio(IServicioUsuario servicioUsuarios)
+        public MenuInicio(IUsuarioAutenticacionService userAS, IUsuarioRegistroService userRS, IUsuarioConsultaService userCS, IRolConsultaService rolCS)
         {
-            _servicioUsuarios = servicioUsuarios;
+            _userAS = userAS;
+            _userRS = userRS;
+            _userCS = userCS;
+            _rolCS = rolCS;
         }
 
         public async Task<User> Mostrar()
@@ -73,7 +79,7 @@ namespace _1_ConsoleApp.Menu
                 Console.Clear();
                 Console.WriteLine("===== Iniciar Sesión =====");
 
-                var usuarios = await _servicioUsuarios.MostrarUsuarios();
+                var usuarios = await _userCS.MostrarUsuarios();
 
                 if (usuarios.Count == 0)
                 {
@@ -86,7 +92,7 @@ namespace _1_ConsoleApp.Menu
 
                 foreach (var user in usuarios)
                 {
-                    Console.WriteLine($"• {user.id}: {user.Name}. ({user.Email})");
+                    Console.WriteLine($"• {user.Id}: {user.Name}. ({user.Email})");
                 }
 
                 Console.WriteLine("\nIngrese el ID del usuario que desea.");
@@ -101,7 +107,7 @@ namespace _1_ConsoleApp.Menu
                     return null;
                 }
 
-                var usuario = await _servicioUsuarios.Login(idSeleccionado);
+                var usuario = await _userAS.Login(idSeleccionado);
                 if (usuario == null)
                 {
                     Console.ForegroundColor = ConsoleColor.Red;
@@ -133,23 +139,23 @@ namespace _1_ConsoleApp.Menu
                 string nombre;
                 do
                 {
-                    Console.Write("Título: ");
+                    Console.Write("Nombre de Usuario: ");
                     nombre = Console.ReadLine()?.Trim() ?? "";
                 } while (string.IsNullOrWhiteSpace(nombre));
 
                 string email;
                 do
                 {
-                    Console.Write("Título: ");
+                    Console.Write("Email de Usuario: ");
                     email = Console.ReadLine()?.Trim() ?? "";
                 } while (string.IsNullOrWhiteSpace(email));
 
-                var roles = await _servicioUsuarios.ObtenerRolesDisponibles();
+                var roles = await _rolCS.ObtenerRolesDisponibles();
 
                 Console.WriteLine("\n===== Roles disponibles =====");
                 foreach (var rol in roles)
                 {
-                    Console.WriteLine($"{rol.id}: {rol.Name}");
+                    Console.WriteLine($"{rol.Id}: {rol.Name}");
                 }
 
                 int roleId;
@@ -158,7 +164,7 @@ namespace _1_ConsoleApp.Menu
                     Console.Write("\nIngrese el ID de rol deseado: ");
                     var input = Console.ReadLine();
 
-                    if (int.TryParse(input, out roleId) && roles.Any(r => r.id == roleId))
+                    if (int.TryParse(input, out roleId) && roles.Any(r => r.Id == roleId))
                     {
                         break;
                     }
@@ -168,7 +174,7 @@ namespace _1_ConsoleApp.Menu
                     Console.ForegroundColor = ConsoleColor.White;
                 }
 
-                var creado = await _servicioUsuarios.RegistrarUsuario(nombre, email, roleId);
+                var creado = await _userRS.RegistrarUsuario(nombre, email, roleId);
                 Console.WriteLine("Usuario creado exitosamente. Presione una tecla para continuar...");
                 Console.ReadKey();
 

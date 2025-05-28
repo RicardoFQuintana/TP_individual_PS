@@ -30,33 +30,39 @@ namespace _2_Infraestructura.Migrations
 
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<long>("Id"));
 
-                    b.Property<int>("ApproverRole_ID")
-                        .HasColumnType("int");
+                    b.Property<int>("ApproverRoleId")
+                        .HasColumnType("int")
+                        .HasColumnName("ApproverRoleId");
 
-                    b.Property<int?>("Area_ID")
-                        .HasColumnType("int");
+                    b.Property<int?>("AreaId")
+                        .HasColumnType("int")
+                        .HasColumnName("Area");
 
                     b.Property<decimal>("MaxAmount")
                         .HasPrecision(18, 2)
-                        .HasColumnType("decimal(18,2)");
+                        .HasColumnType("decimal(18,2)")
+                        .HasColumnName("MaxAmount");
 
                     b.Property<decimal>("MinAmount")
                         .HasPrecision(18, 2)
-                        .HasColumnType("decimal(18,2)");
+                        .HasColumnType("decimal(18,2)")
+                        .HasColumnName("MinAmount");
 
                     b.Property<int>("StepOrder")
-                        .HasColumnType("int");
+                        .HasColumnType("int")
+                        .HasColumnName("StepOrder");
 
-                    b.Property<int?>("Type_ID")
-                        .HasColumnType("int");
+                    b.Property<int?>("TypeId")
+                        .HasColumnType("int")
+                        .HasColumnName("Type");
 
                     b.HasKey("Id");
 
-                    b.HasIndex("ApproverRole_ID");
+                    b.HasIndex("ApproverRoleId");
 
-                    b.HasIndex("Area_ID");
+                    b.HasIndex("AreaId");
 
-                    b.HasIndex("Type_ID");
+                    b.HasIndex("TypeId");
 
                     b.ToTable("ApprovalRule", (string)null);
 
@@ -64,7 +70,7 @@ namespace _2_Infraestructura.Migrations
                         new
                         {
                             Id = 1L,
-                            ApproverRole_ID = 1,
+                            ApproverRoleId = 1,
                             MaxAmount = 100000m,
                             MinAmount = 0m,
                             StepOrder = 1
@@ -72,7 +78,7 @@ namespace _2_Infraestructura.Migrations
                         new
                         {
                             Id = 2L,
-                            ApproverRole_ID = 2,
+                            ApproverRoleId = 2,
                             MaxAmount = 20000m,
                             MinAmount = 5000m,
                             StepOrder = 2
@@ -80,17 +86,17 @@ namespace _2_Infraestructura.Migrations
                         new
                         {
                             Id = 3L,
-                            ApproverRole_ID = 2,
-                            Area_ID = 2,
+                            ApproverRoleId = 2,
+                            AreaId = 2,
                             MaxAmount = 20000m,
                             MinAmount = 0m,
                             StepOrder = 1,
-                            Type_ID = 2
+                            TypeId = 2
                         },
                         new
                         {
                             Id = 4L,
-                            ApproverRole_ID = 3,
+                            ApproverRoleId = 3,
                             MaxAmount = 0m,
                             MinAmount = 20000m,
                             StepOrder = 3
@@ -98,37 +104,37 @@ namespace _2_Infraestructura.Migrations
                         new
                         {
                             Id = 5L,
-                            ApproverRole_ID = 2,
-                            Area_ID = 1,
+                            ApproverRoleId = 2,
+                            AreaId = 1,
                             MaxAmount = 0m,
                             MinAmount = 5000m,
                             StepOrder = 2,
-                            Type_ID = 1
+                            TypeId = 1
                         },
                         new
                         {
                             Id = 6L,
-                            ApproverRole_ID = 1,
+                            ApproverRoleId = 1,
                             MaxAmount = 10000m,
                             MinAmount = 0m,
                             StepOrder = 1,
-                            Type_ID = 2
+                            TypeId = 2
                         },
                         new
                         {
                             Id = 7L,
-                            ApproverRole_ID = 4,
-                            Area_ID = 2,
+                            ApproverRoleId = 4,
+                            AreaId = 2,
                             MaxAmount = 10000m,
                             MinAmount = 0m,
                             StepOrder = 1,
-                            Type_ID = 1
+                            TypeId = 1
                         },
                         new
                         {
                             Id = 8L,
-                            ApproverRole_ID = 2,
-                            Area_ID = 2,
+                            ApproverRoleId = 2,
+                            AreaId = 2,
                             MaxAmount = 30000m,
                             MinAmount = 10000m,
                             StepOrder = 2
@@ -136,8 +142,8 @@ namespace _2_Infraestructura.Migrations
                         new
                         {
                             Id = 9L,
-                            ApproverRole_ID = 3,
-                            Area_ID = 3,
+                            ApproverRoleId = 3,
+                            AreaId = 3,
                             MaxAmount = 0m,
                             MinAmount = 30000m,
                             StepOrder = 2
@@ -145,130 +151,133 @@ namespace _2_Infraestructura.Migrations
                         new
                         {
                             Id = 10L,
-                            ApproverRole_ID = 4,
+                            ApproverRoleId = 4,
                             MaxAmount = 50000m,
                             MinAmount = 0m,
                             StepOrder = 1,
-                            Type_ID = 4
+                            TypeId = 4
                         });
                 });
 
             modelBuilder.Entity("_4_Dominio.ApprovalStatus", b =>
                 {
-                    b.Property<int>("id")
+                    b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
-                        .HasColumnType("int");
+                        .HasColumnType("int")
+                        .HasColumnName("Id");
 
-                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("id"));
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
 
                     b.Property<string>("Name")
                         .IsRequired()
-                        .HasMaxLength(25)
-                        .HasColumnType("nvarchar(25)");
+                        .HasColumnType("varchar(25)")
+                        .HasColumnName("Name");
 
-                    b.HasKey("id");
+                    b.HasKey("Id");
 
                     b.ToTable("ApprovalStatus", (string)null);
 
                     b.HasData(
                         new
                         {
-                            id = 1,
+                            Id = 1,
                             Name = "Pending"
                         },
                         new
                         {
-                            id = 2,
+                            Id = 2,
                             Name = "Approved"
                         },
                         new
                         {
-                            id = 3,
+                            Id = 3,
                             Name = "Rejected"
                         },
                         new
                         {
-                            id = 4,
+                            Id = 4,
                             Name = "Observed"
                         });
                 });
 
             modelBuilder.Entity("_4_Dominio.ApproverRole", b =>
                 {
-                    b.Property<int>("id")
+                    b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
-                        .HasColumnType("int");
+                        .HasColumnType("int")
+                        .HasColumnName("Id");
 
-                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("id"));
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
 
                     b.Property<string>("Name")
                         .IsRequired()
-                        .HasMaxLength(25)
-                        .HasColumnType("nvarchar(25)");
+                        .HasColumnType("varchar(25)")
+                        .HasColumnName("Name");
 
-                    b.HasKey("id");
+                    b.HasKey("Id");
 
                     b.ToTable("ApproverRole", (string)null);
 
                     b.HasData(
                         new
                         {
-                            id = 1,
+                            Id = 1,
                             Name = "Líder de Área"
                         },
                         new
                         {
-                            id = 2,
+                            Id = 2,
                             Name = "Gerente"
                         },
                         new
                         {
-                            id = 3,
+                            Id = 3,
                             Name = "Director"
                         },
                         new
                         {
-                            id = 4,
+                            Id = 4,
                             Name = "Comité Tecnico"
                         });
                 });
 
             modelBuilder.Entity("_4_Dominio.Area", b =>
                 {
-                    b.Property<int>("id")
+                    b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
-                        .HasColumnType("int");
+                        .HasColumnType("int")
+                        .HasColumnName("Id");
 
-                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("id"));
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
 
                     b.Property<string>("Name")
                         .IsRequired()
-                        .HasMaxLength(25)
-                        .HasColumnType("nvarchar(25)");
+                        .HasColumnType("varchar(25)")
+                        .HasColumnName("Name");
 
-                    b.HasKey("id");
+                    b.HasKey("Id");
 
                     b.ToTable("Area", (string)null);
 
                     b.HasData(
                         new
                         {
-                            id = 1,
+                            Id = 1,
                             Name = "Finanzas"
                         },
                         new
                         {
-                            id = 2,
+                            Id = 2,
                             Name = "Tecnología"
                         },
                         new
                         {
-                            id = 3,
+                            Id = 3,
                             Name = "Recursos Humanos"
                         },
                         new
                         {
-                            id = 4,
+                            Id = 4,
                             Name = "Operaciones"
                         });
                 });
@@ -277,40 +286,48 @@ namespace _2_Infraestructura.Migrations
                 {
                     b.Property<long>("Id")
                         .ValueGeneratedOnAdd()
-                        .HasColumnType("bigint");
+                        .HasColumnType("bigint")
+                        .HasColumnName("Id");
 
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<long>("Id"));
 
-                    b.Property<int>("ApproverRole_ID")
-                        .HasColumnType("int");
+                    b.Property<int>("ApproverRoleId")
+                        .HasColumnType("int")
+                        .HasColumnName("ApproverRoleId");
 
-                    b.Property<int?>("ApproverUser_ID")
-                        .HasColumnType("int");
+                    b.Property<int?>("ApproverUserId")
+                        .HasColumnType("int")
+                        .HasColumnName("ApproverUserId");
 
                     b.Property<DateTime?>("DecisionDate")
-                        .HasColumnType("datetime2");
+                        .HasColumnType("datetime")
+                        .HasColumnName("DecisionDate");
 
                     b.Property<string>("Observations")
-                        .HasColumnType("nvarchar(max)");
+                        .HasColumnType("varchar(max)")
+                        .HasColumnName("Observations");
 
-                    b.Property<Guid>("ProjectProposal_ID")
-                        .HasColumnType("uniqueidentifier");
+                    b.Property<Guid>("ProjectProposalId")
+                        .HasColumnType("uniqueidentifier")
+                        .HasColumnName("ProjectProposalId");
 
-                    b.Property<int>("Status_ID")
-                        .HasColumnType("int");
+                    b.Property<int>("StatusId")
+                        .HasColumnType("int")
+                        .HasColumnName("Status");
 
                     b.Property<int>("StepOrder")
-                        .HasColumnType("int");
+                        .HasColumnType("int")
+                        .HasColumnName("StepOrder");
 
                     b.HasKey("Id");
 
-                    b.HasIndex("ApproverRole_ID");
+                    b.HasIndex("ApproverRoleId");
 
-                    b.HasIndex("ApproverUser_ID");
+                    b.HasIndex("ApproverUserId");
 
-                    b.HasIndex("ProjectProposal_ID");
+                    b.HasIndex("ProjectProposalId");
 
-                    b.HasIndex("Status_ID");
+                    b.HasIndex("StatusId");
 
                     b.ToTable("ProjectApprovalStep", (string)null);
                 });
@@ -319,161 +336,173 @@ namespace _2_Infraestructura.Migrations
                 {
                     b.Property<Guid>("Id")
                         .ValueGeneratedOnAdd()
-                        .HasColumnType("uniqueidentifier");
+                        .HasColumnType("uniqueidentifier")
+                        .HasColumnName("Id");
 
-                    b.Property<int>("Area_ID")
-                        .HasColumnType("int");
+                    b.Property<int>("AreaId")
+                        .HasColumnType("int")
+                        .HasColumnName("Area");
 
                     b.Property<DateTime>("CreateAt")
-                        .HasColumnType("datetime2");
+                        .HasColumnType("datetime")
+                        .HasColumnName("CreateAt");
 
-                    b.Property<int>("CreateBy_ID")
-                        .HasColumnType("int");
+                    b.Property<int>("CreateById")
+                        .HasColumnType("int")
+                        .HasColumnName("CreateBy");
 
                     b.Property<string>("Description")
                         .IsRequired()
-                        .HasColumnType("nvarchar(max)");
+                        .HasColumnType("varchar(max)")
+                        .HasColumnName("Description");
 
                     b.Property<decimal>("EstimatedAmount")
                         .HasPrecision(18, 2)
-                        .HasColumnType("decimal(18,2)");
+                        .HasColumnType("decimal(18,2)")
+                        .HasColumnName("EstimatedAmount");
 
                     b.Property<int>("EstimatedDuration")
-                        .HasColumnType("int");
+                        .HasColumnType("int")
+                        .HasColumnName("EstimatedDuration");
 
-                    b.Property<int>("Status_ID")
-                        .HasColumnType("int");
+                    b.Property<int>("StatusId")
+                        .HasColumnType("int")
+                        .HasColumnName("Status");
 
                     b.Property<string>("Title")
                         .IsRequired()
-                        .HasMaxLength(255)
-                        .HasColumnType("nvarchar(255)");
+                        .HasColumnType("varchar(255)")
+                        .HasColumnName("Title");
 
-                    b.Property<int>("Type_ID")
-                        .HasColumnType("int");
+                    b.Property<int>("TypeId")
+                        .HasColumnType("int")
+                        .HasColumnName("Type");
 
                     b.HasKey("Id");
 
-                    b.HasIndex("Area_ID");
+                    b.HasIndex("AreaId");
 
-                    b.HasIndex("CreateBy_ID");
+                    b.HasIndex("CreateById");
 
-                    b.HasIndex("Status_ID");
+                    b.HasIndex("StatusId");
 
-                    b.HasIndex("Type_ID");
+                    b.HasIndex("TypeId");
 
                     b.ToTable("ProjectProposal", (string)null);
                 });
 
             modelBuilder.Entity("_4_Dominio.ProjectType", b =>
                 {
-                    b.Property<int>("id")
+                    b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
-                        .HasColumnType("int");
+                        .HasColumnType("int")
+                        .HasColumnName("Id");
 
-                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("id"));
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
 
                     b.Property<string>("Name")
                         .IsRequired()
-                        .HasMaxLength(25)
-                        .HasColumnType("nvarchar(25)");
+                        .HasColumnType("varchar(25)")
+                        .HasColumnName("Name");
 
-                    b.HasKey("id");
+                    b.HasKey("Id");
 
                     b.ToTable("ProjectType", (string)null);
 
                     b.HasData(
                         new
                         {
-                            id = 1,
+                            Id = 1,
                             Name = "Mejora de Procesos"
                         },
                         new
                         {
-                            id = 2,
+                            Id = 2,
                             Name = "Innovación y Desarrollo"
                         },
                         new
                         {
-                            id = 3,
+                            Id = 3,
                             Name = "Infraestructura"
                         },
                         new
                         {
-                            id = 4,
+                            Id = 4,
                             Name = "Capacitación Interna"
                         });
                 });
 
             modelBuilder.Entity("_4_Dominio.User", b =>
                 {
-                    b.Property<int>("id")
+                    b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
-                        .HasColumnType("int");
+                        .HasColumnType("int")
+                        .HasColumnName("Id");
 
-                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("id"));
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
 
                     b.Property<string>("Email")
                         .IsRequired()
-                        .HasMaxLength(100)
-                        .HasColumnType("nvarchar(100)");
+                        .HasColumnType("varchar(100)")
+                        .HasColumnName("Email");
 
                     b.Property<string>("Name")
                         .IsRequired()
-                        .HasMaxLength(25)
-                        .HasColumnType("nvarchar(25)");
+                        .HasColumnType("varchar(25)")
+                        .HasColumnName("Name");
 
-                    b.Property<int>("Role_ID")
-                        .HasColumnType("int");
+                    b.Property<int>("RoleId")
+                        .HasColumnType("int")
+                        .HasColumnName("Role");
 
-                    b.HasKey("id");
+                    b.HasKey("Id");
 
-                    b.HasIndex("Role_ID");
+                    b.HasIndex("RoleId");
 
                     b.ToTable("User", (string)null);
 
                     b.HasData(
                         new
                         {
-                            id = 1,
+                            Id = 1,
                             Email = "jferreyra@unaj.com",
                             Name = "José Ferreyra",
-                            Role_ID = 2
+                            RoleId = 2
                         },
                         new
                         {
-                            id = 2,
+                            Id = 2,
                             Email = "alucero@unaj.com",
                             Name = "Ana Lucero",
-                            Role_ID = 1
+                            RoleId = 1
                         },
                         new
                         {
-                            id = 3,
+                            Id = 3,
                             Email = "gmolinas@unaj.com",
                             Name = "Gonzalo Molinas",
-                            Role_ID = 2
+                            RoleId = 2
                         },
                         new
                         {
-                            id = 4,
+                            Id = 4,
                             Email = "lolivera@unaj.com",
                             Name = "Lucas Olivera",
-                            Role_ID = 3
+                            RoleId = 3
                         },
                         new
                         {
-                            id = 5,
+                            Id = 5,
                             Email = "dfagundez@unaj.com",
                             Name = "Danilo Fagundez",
-                            Role_ID = 4
+                            RoleId = 4
                         },
                         new
                         {
-                            id = 6,
+                            Id = 6,
                             Email = "ggalli@unaj.com",
                             Name = "Gabriel Galli",
-                            Role_ID = 4
+                            RoleId = 4
                         });
                 });
 
@@ -481,17 +510,17 @@ namespace _2_Infraestructura.Migrations
                 {
                     b.HasOne("_4_Dominio.ApproverRole", "ApproverRole")
                         .WithMany()
-                        .HasForeignKey("ApproverRole_ID")
+                        .HasForeignKey("ApproverRoleId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
                     b.HasOne("_4_Dominio.Area", "Area")
                         .WithMany()
-                        .HasForeignKey("Area_ID");
+                        .HasForeignKey("AreaId");
 
                     b.HasOne("_4_Dominio.ProjectType", "Type")
                         .WithMany()
-                        .HasForeignKey("Type_ID");
+                        .HasForeignKey("TypeId");
 
                     b.Navigation("ApproverRole");
 
@@ -504,24 +533,24 @@ namespace _2_Infraestructura.Migrations
                 {
                     b.HasOne("_4_Dominio.ApproverRole", "ApproverRole")
                         .WithMany()
-                        .HasForeignKey("ApproverRole_ID")
+                        .HasForeignKey("ApproverRoleId")
                         .OnDelete(DeleteBehavior.Restrict)
                         .IsRequired();
 
                     b.HasOne("_4_Dominio.User", "ApproverUser")
                         .WithMany()
-                        .HasForeignKey("ApproverUser_ID")
+                        .HasForeignKey("ApproverUserId")
                         .OnDelete(DeleteBehavior.Restrict);
 
                     b.HasOne("_4_Dominio.ProjectProposal", "ProjectProposal")
                         .WithMany()
-                        .HasForeignKey("ProjectProposal_ID")
+                        .HasForeignKey("ProjectProposalId")
                         .OnDelete(DeleteBehavior.Restrict)
                         .IsRequired();
 
                     b.HasOne("_4_Dominio.ApprovalStatus", "Status")
                         .WithMany()
-                        .HasForeignKey("Status_ID")
+                        .HasForeignKey("StatusId")
                         .OnDelete(DeleteBehavior.Restrict)
                         .IsRequired();
 
@@ -538,25 +567,25 @@ namespace _2_Infraestructura.Migrations
                 {
                     b.HasOne("_4_Dominio.Area", "Area")
                         .WithMany()
-                        .HasForeignKey("Area_ID")
+                        .HasForeignKey("AreaId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
                     b.HasOne("_4_Dominio.User", "CreateBy")
                         .WithMany()
-                        .HasForeignKey("CreateBy_ID")
+                        .HasForeignKey("CreateById")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
                     b.HasOne("_4_Dominio.ApprovalStatus", "Status")
                         .WithMany()
-                        .HasForeignKey("Status_ID")
+                        .HasForeignKey("StatusId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
                     b.HasOne("_4_Dominio.ProjectType", "Type")
                         .WithMany()
-                        .HasForeignKey("Type_ID")
+                        .HasForeignKey("TypeId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
@@ -573,7 +602,7 @@ namespace _2_Infraestructura.Migrations
                 {
                     b.HasOne("_4_Dominio.ApproverRole", "Role")
                         .WithMany()
-                        .HasForeignKey("Role_ID")
+                        .HasForeignKey("RoleId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 

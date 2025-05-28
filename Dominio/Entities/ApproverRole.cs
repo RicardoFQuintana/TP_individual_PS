@@ -10,10 +10,8 @@ namespace _4_Dominio
 {
     public class ApproverRole
     {
-        [Key]
-        [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
-        public int id { get; set; }
-        public string Name { get; set; }
+        public int Id { get; set; }
+        public string Name { get; set; } = string.Empty;
 
     }
 }

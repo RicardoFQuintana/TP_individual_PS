@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using _3_Aplicacion.Dto;
+using _3_Aplicacion.Dto.Request;
 using _3_Aplicacion.Interfaces.IServices;
 using _3_Aplicacion.UseCase;
 using _4_Dominio;
@@ -12,15 +13,26 @@ namespace _1_ConsoleApp.Menu
 {
     public class MenuPrincipal
     {
-        private readonly IServicioProyectos _servicioProyectos;
-        private readonly IServicioAprobacionProyectos _servicioAprobacion;
-        private readonly IServicioUsuario _servicioUsuarios;
+        private readonly IProyectoCreacionService _projectCreateS;
+        private readonly IProyectoConsultaService _projectCS;
+        private readonly IProyectoFlujoService _projectFS;
+        private readonly IProyectoPasoConsultaService _projectPCS;
+        private readonly IAprobacionDecisionService _approvalDS;
+        private readonly IAprobacionConsultaService _approvalCS;
+        private readonly IAreaConsultaService _areaCS;
+        private readonly ITypeConsultaService _typeCS;
 
-        public MenuPrincipal(IServicioProyectos servicioProyectos, IServicioAprobacionProyectos servicioAprobacion, IServicioUsuario servicioUsuarios)
+        public MenuPrincipal(IProyectoCreacionService projectCreateS,  IProyectoConsultaService projectCS, IProyectoFlujoService projectFS, IProyectoPasoConsultaService projectPCS,
+                                            IAprobacionDecisionService approvalDS, IAprobacionConsultaService approvalCS, IAreaConsultaService areaCS, ITypeConsultaService typeCS)
         {
-            _servicioProyectos = servicioProyectos;
-            _servicioAprobacion = servicioAprobacion;
-            _servicioUsuarios = servicioUsuarios;
+            _approvalDS = approvalDS;
+            _approvalCS = approvalCS;
+            _projectCreateS = projectCreateS;
+            _projectCS = projectCS;
+            _projectFS = projectFS;
+            _projectPCS = projectPCS;
+            _areaCS = areaCS;
+            _typeCS = typeCS;
         }
 
         public async Task Mostrar(User usuarioActivo)
@@ -86,7 +98,7 @@ namespace _1_ConsoleApp.Menu
         {
             try
             {
-                var propuestas = await _servicioProyectos.MisPropuestas(usuario);
+                var propuestas = await _projectCS.MisPropuestas(usuario);
 
                 if (propuestas.Count == 0)
                 {
@@ -94,7 +106,7 @@ namespace _1_ConsoleApp.Menu
                     return;
                 }
 
-                var approvalSteps = await _servicioProyectos.MisPasos(propuestas);
+                var approvalSteps = await _projectPCS.MisPasos(propuestas);
 
                 if (approvalSteps.Count == 0)
                 {
@@ -106,17 +118,17 @@ namespace _1_ConsoleApp.Menu
                 {
 
                     var stepsForProposal = approvalSteps
-                        .Where(pas => pas.ProjectProposal_ID == propuesta.Id)
+                        .Where(pas => pas.ProjectProposalId == propuesta.Id)
                         .ToList();
 
                     Console.WriteLine($"\n================= Proyecto {propuesta.Id} =================");
                     Console.WriteLine($"Título: {propuesta.Title}");
                     Console.WriteLine($"Descripción: {propuesta.Description}");
-                    Console.WriteLine($"Área: {propuesta.Area.Name}");
-                    Console.WriteLine($"Tipo: {propuesta.Type.Name}");
+                    Console.WriteLine($"Área: {propuesta.Area?.Name ?? "No especificada"}");
+                    Console.WriteLine($"Tipo: {propuesta.Type?.Name ?? "No especificado"}");
                     Console.WriteLine($"Monto estimado: ${propuesta.EstimatedAmount}");
                     Console.WriteLine($"Duración estimada: {propuesta.EstimatedDuration} días");
-                    Console.WriteLine($"Estado general: {propuesta.Status.Name}");
+                    Console.WriteLine($"Estado general: {propuesta.Status?.Name ?? "No especificada"}");
 
                     Console.WriteLine("\nFlujo de aprobación:");
 
@@ -154,7 +166,7 @@ namespace _1_ConsoleApp.Menu
                     descripcion = Console.ReadLine()?.Trim() ?? "";
                 } while (string.IsNullOrWhiteSpace(descripcion));
 
-                var areas = await _servicioProyectos.ObternerArea();
+                var areas = await _areaCS.ObternerArea();
 
                 if (areas.Count == 0)
                 {
@@ -169,7 +181,7 @@ namespace _1_ConsoleApp.Menu
                 int areaId = ElegirOpcion(areas.Count);
                 var areaSeleccionada = areas[areaId - 1];
 
-                var tipos = await _servicioProyectos.ObternerTipos();
+                var tipos = await _typeCS.ObternerTipos();
 
                 if (tipos.Count == 0)
                 {
@@ -202,21 +214,21 @@ namespace _1_ConsoleApp.Menu
                     Console.WriteLine("Duración inválida. Intente nuevamente.");
                 }
 
-
-                var dto = new CrearPropuestaDto
+                var Project = new ProjectCreate
                 {
-                    Title = titulo,
-                    Description = descripcion,
-                    Area_ID = areaSeleccionada.id,
-                    Type_ID = tipoSeleccionado.id,
-                    EstimatedAmount = monto,
-                    EstimatedDuration = duracion,
-                    CreateBy_ID = usuario.id,
+                    title = titulo,
+                    description = descripcion,
+                    amount = monto,
+                    duration = duracion,
+                    area = areaSeleccionada.Id,
+                    status = 1,
+                    type = tipoSeleccionado.Id,
+                    createdBy = usuario.Id
                 };
 
                 try
                 {
-                    await _servicioProyectos.CrearPropuesta(dto);
+                    var P = await _projectCreateS.CrearPropuesta(Project);
                     Console.ForegroundColor = ConsoleColor.Green;
                     Console.WriteLine("\n Propuesta creada exitosamente.");
                 }
@@ -239,11 +251,10 @@ namespace _1_ConsoleApp.Menu
             try
             {
 
-                var pasosPendientes = await _servicioAprobacion.ObtenerPasosPendientes(usuario);
+                var pasosPendientes = await _approvalCS.ObtenerPasosPendientesFiltrados(usuario);
 
-                var pasosFiltrados = _servicioAprobacion.ObtenerPasosFiltrados(pasosPendientes);
 
-                if (pasosFiltrados.Count == 0)
+                if (pasosPendientes.Count == 0)
                 {
                     Console.WriteLine("No tenés pasos de aprobación pendientes.");
                     return;
@@ -251,7 +262,7 @@ namespace _1_ConsoleApp.Menu
 
                 Console.WriteLine("===== Pasos de aprobación asignados a tu rol =====");
 
-                foreach (var paso in pasosFiltrados)
+                foreach (var paso in pasosPendientes)
                 {
                     var propuesta = paso.ProjectProposal!;
                     Console.WriteLine($"\nProyecto: {propuesta.Title}");
@@ -263,29 +274,29 @@ namespace _1_ConsoleApp.Menu
                     string opcion;
                     while (true)
                     {
-                        Console.Write("¿Deseás aprobar (A), rechazar (R) o dejarlo en observación (O) este paso? ");
+                        Console.Write("¿Deseás aprobar (A), rechazar (R) este paso? ");
                         opcion = Console.ReadLine()?.Trim().ToUpper() ?? "";
 
-                        if (opcion == "A" || opcion == "R" || opcion == "O")
+                        if (opcion == "A" || opcion == "R")
                             break;
 
                         Console.ForegroundColor = ConsoleColor.Red;
-                        Console.WriteLine("Opción inválida. Ingresá A, R o O.");
+                        Console.WriteLine("Opción inválida. Ingresá A, R.");
                         Console.ResetColor();
                     }
+
+                    Console.Write("Ingresá una observación (opcional, presioná Enter para omitir): ");
+                    string observacion = Console.ReadLine()?.Trim() ?? "";
 
                     bool exito = false;
 
                     switch (opcion)
                     {
                         case "A":
-                            exito = await _servicioAprobacion.AprobarPaso(paso.Id, usuario.id);
+                            exito = await _approvalDS.AprobarPaso(paso.Id, usuario.Id, observacion);
                             break;
                         case "R":
-                            exito = await _servicioAprobacion.RechazarPaso(paso.Id, usuario.id);
-                            break;
-                        case "O":
-                            exito = await _servicioAprobacion.ObservarPaso(paso.Id, usuario.id);
+                            exito = await _approvalDS.RechazarPaso(paso.Id, usuario.Id, observacion);
                             break;
                         default:
                             Console.WriteLine("Opción inválida. Se omitió este paso.");
@@ -294,7 +305,7 @@ namespace _1_ConsoleApp.Menu
                     if (exito)
                     {
                         Console.WriteLine("\n Cambios guardados correctamente.");
-                        await _servicioProyectos.EvaluarEstadoPropuesta(paso.ProjectProposal_ID);
+                        await _projectFS.EvaluarEstadoPropuesta(paso.ProjectProposalId);
                     }
                     else
                     {

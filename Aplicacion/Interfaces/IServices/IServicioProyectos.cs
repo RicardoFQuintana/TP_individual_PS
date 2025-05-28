@@ -5,6 +5,8 @@ using System.Text;
 using System.Threading.Tasks;
 using _3_Aplicacion.Dto;
 using _4_Dominio;
+using _3_Aplicacion.Dto.Response;
+using _3_Aplicacion.Dto.Request;
 
 namespace _3_Aplicacion.Interfaces.IServices
 {
@@ -12,7 +14,7 @@ namespace _3_Aplicacion.Interfaces.IServices
     {
         Task<List<ProjectProposal>> MisPropuestas(User usuario);
         Task<List<ProjectApprovalStep>> MisPasos(List<ProjectProposal> propuestas);
-        Task CrearPropuesta(CrearPropuestaDto dto);
+        Task<ProjectProposal> CrearPropuesta(ProjectCreate dto);
         Task<List<Area>> ObternerArea();
         Task<List<ProjectType>> ObternerTipos();
         Task EvaluarEstadoPropuesta(Guid propuestaId);
