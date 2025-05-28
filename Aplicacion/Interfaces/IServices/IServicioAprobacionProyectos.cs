@@ -11,8 +11,8 @@ namespace _3_Aplicacion.Interfaces.IServices
     {
         List<ProjectApprovalStep> ObtenerPasosFiltrados(List<ProjectApprovalStep> Pasos);
         Task<List<ProjectApprovalStep>> ObtenerPasosPendientes(User usuario);
-        Task<bool> AprobarPaso(long pasoId, int usuarioId);
-        Task<bool> RechazarPaso(long pasoId, int usuarioId);
-        Task<bool> ObservarPaso(long pasoId, int usuarioId);
+        Task<bool> AprobarPaso(long pasoId, int usuarioId, string observacion);
+        Task<bool> RechazarPaso(long pasoId, int usuarioId, string observacion);
+        Task<bool> ObservarPaso(long pasoId, int usuarioId, string observacion);
     }
 }

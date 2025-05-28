@@ -35,7 +35,7 @@ namespace _2_Infraestructura.Commands
             var propuesta = await _context.ProjectProposals.FindAsync(propuestaId);
             if (propuesta != null)
             {
-                propuesta.Status_ID = nuevoEstadoId;
+                propuesta.StatusId = nuevoEstadoId;
                 await _context.SaveChangesAsync();
             }
         }

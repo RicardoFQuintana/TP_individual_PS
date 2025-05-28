@@ -26,13 +26,25 @@ IUsuarioCommands usuarioC = new UsuarioCommands(context);
 
 
 IFlujoAprobacionGenerator flujo = new FlujoAprobacionGenerator(aprobacionQ);
-IServicioUsuario usuario = new ServicioUsuarios(usuarioQ, usuarioC, rolQ);
-IServicioProyectos proyecto = new ServicioProyectos(proyectoQ, proyectoC, flujo, aprobacionC, aprobacionQ, areaQ, typeQ);
-IServicioAprobacionProyectos aprobacion = new ServicioAprobacionProyectos(aprobacionQ, aprobacionC);
+IUsuarioAutenticacionService userAS = new UsuarioAutenticacionService(usuarioQ);
+IUsuarioRegistroService userRS = new UsuarioRegistroService(usuarioQ, usuarioC);
+IUsuarioConsultaService userCS = new UsuarioConsultaService(usuarioQ);
+IRolConsultaService rolCS = new RolConsultaService(rolQ);
+IAreaConsultaService areaCS = new AreaConsultaService(areaQ);
+ITypeConsultaService typeCS = new TypeConsultaService(typeQ);
+IProyectoCreacionService projectCreateS = new ProyectoCreacionService(proyectoC, flujo, aprobacionC);
+IProyectoConsultaService projectCS = new ProyectoConsultaService(proyectoQ, aprobacionQ);
+IProyectoFlujoService projectFS = new ProyectoFlujoService(proyectoQ,proyectoC);
+IProyectoPasoConsultaService projectPCS = new ProyectoPasoConsultaService(proyectoQ); 
+IAprobacionDecisionService approvalDS = new AprobacionDecisionService(aprobacionC);
+IAprobacionFiltradoService approvalFS = new AprobacionFiltradoService();
+IAprobacionConsultaService approvalCS = new AprobacionConsultaService(aprobacionQ, approvalFS);
 
 
-var menuInicio = new MenuInicio(usuario);
-var menuPrincipal = new MenuPrincipal(proyecto, aprobacion, usuario);
+
+
+var menuInicio = new MenuInicio(userAS, userRS, userCS, rolCS);
+var menuPrincipal = new MenuPrincipal(projectCreateS, projectCS, projectFS, projectPCS, approvalDS, approvalCS, areaCS, typeCS);
 
 // Bucle general
 while (true)

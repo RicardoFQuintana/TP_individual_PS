@@ -25,7 +25,7 @@ namespace _3_Aplicacion.UseCase
             var reglasPorOrden = reglasAplicables
                 .GroupBy(r => r.StepOrder)
                 .Select(g =>
-                    g.OrderByDescending(r => (r.Area_ID.HasValue ? 1 : 0) + (r.Type_ID.HasValue ? 1 : 0)) // más específicos primero
+                    g.OrderByDescending(r => (r.AreaId.HasValue ? 1 : 0) + (r.TypeId.HasValue ? 1 : 0)) // más específicos primero
                     .First()
                 )
                 .OrderBy(r => r.StepOrder)
@@ -33,10 +33,10 @@ namespace _3_Aplicacion.UseCase
 
             var pasos = reglasPorOrden.Select(regla => new ProjectApprovalStep
             {
-                ProjectProposal_ID = propuesta.Id,
-                ApproverRole_ID = regla.ApproverRole_ID,
+                ProjectProposalId = propuesta.Id,
+                ApproverRoleId = regla.ApproverRoleId,
                 StepOrder = regla.StepOrder,
-                Status_ID = 1 // Pendiente
+                StatusId = 1 // Pendiente
             }).ToList();
 
             return pasos;

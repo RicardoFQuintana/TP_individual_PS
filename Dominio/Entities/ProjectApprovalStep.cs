@@ -1,7 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.ComponentModel.DataAnnotations.Schema;
-using System.ComponentModel.DataAnnotations;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -10,24 +8,18 @@ namespace _4_Dominio
 {
     public class ProjectApprovalStep
     {
-        [Key]
-        [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         public long Id { get; set; }
 
-        public Guid ProjectProposal_ID { get; set; }
-        [ForeignKey("ProjectProposal_ID")]
+        public Guid ProjectProposalId { get; set; }
         public virtual ProjectProposal ProjectProposal { get; set; }
 
-        public int? ApproverUser_ID { get; set; }
-        [ForeignKey("ApproverUser_ID")]
+        public int? ApproverUserId { get; set; }
         public virtual User? ApproverUser { get; set; }
 
-        public int ApproverRole_ID { get; set; }
-        [ForeignKey(" ApproverRole_ID")]
+        public int ApproverRoleId { get; set; }
         public virtual ApproverRole ApproverRole { get; set; }
 
-        public int Status_ID { get; set; }
-        [ForeignKey("Status_ID")]
+        public int StatusId { get; set; }
         public virtual ApprovalStatus Status { get; set; }
 
         public int StepOrder { get; set; }

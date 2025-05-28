@@ -18,67 +18,70 @@ namespace _2_Infraestructura.Commands
             _context = context;
         }
 
-        public async Task<bool> AprobarPasoAsync(long pasoId, int usuarioId)
+        public async Task<bool> AprobarPasoAsync(long pasoId, int usuarioId, string observacion)
         {
             var paso = await _context.ProjectApprovalSteps.FindAsync(pasoId);
-            if (paso == null || paso.ApproverUser_ID != null)
+            if (paso == null || paso.ApproverUserId != null)
                 return false;
 
             bool yaAprobo = await _context.ProjectApprovalSteps
                 .AnyAsync(p =>
-                    p.ProjectProposal_ID == paso.ProjectProposal_ID &&
-                    p.ApproverUser_ID == usuarioId);
+                    p.ProjectProposalId == paso.ProjectProposalId &&
+                    p.ApproverUserId == usuarioId);
 
             if (yaAprobo)
                 return false;
 
-            paso.Status_ID = 2; // Aprobado
-            paso.ApproverUser_ID = usuarioId;
+            paso.StatusId = 2; // Aprobado
+            paso.ApproverUserId = usuarioId;
             paso.DecisionDate = DateTime.Now;
+            paso.Observations = observacion;
 
             await _context.SaveChangesAsync();
             return true;
         }
 
-        public async Task<bool> RechazarPasoAsync(long pasoId, int usuarioId)
+        public async Task<bool> RechazarPasoAsync(long pasoId, int usuarioId, string observacion)
         {
             var paso = await _context.ProjectApprovalSteps.FindAsync(pasoId);
-            if (paso == null || paso.ApproverUser_ID != null)
+            if (paso == null || paso.ApproverUserId != null)
                 return false;
 
             bool yaAprobo = await _context.ProjectApprovalSteps
                 .AnyAsync(p =>
-                    p.ProjectProposal_ID == paso.ProjectProposal_ID &&
-                    p.ApproverUser_ID == usuarioId);
+                    p.ProjectProposalId == paso.ProjectProposalId &&
+                    p.ApproverUserId == usuarioId);
 
             if (yaAprobo)
                 return false;
 
-            paso.Status_ID = 3; // Rechazado
-            paso.ApproverUser_ID = usuarioId;
+            paso.StatusId = 3; // Rechazado
+            paso.ApproverUserId = usuarioId;
             paso.DecisionDate = DateTime.Now;
+            paso.Observations = observacion;
 
             await _context.SaveChangesAsync();
             return true;
         }
 
-        public async Task<bool> ObservarPasoAsync(long pasoId, int usuarioId)
+        public async Task<bool> ObservarPasoAsync(long pasoId, int usuarioId, string observacion)
         {
             var paso = await _context.ProjectApprovalSteps.FindAsync(pasoId);
-            if (paso == null || paso.ApproverUser_ID != null)
+            if (paso == null || paso.ApproverUserId != null)
                 return false;
 
             bool yaAprobo = await _context.ProjectApprovalSteps
                 .AnyAsync(p =>
-                    p.ProjectProposal_ID == paso.ProjectProposal_ID &&
-                    p.ApproverUser_ID == usuarioId);
+                    p.ProjectProposalId == paso.ProjectProposalId &&
+                    p.ApproverUserId == usuarioId);
 
             if (yaAprobo)
                 return false;
 
-            paso.Status_ID = 4; // Observado
-            paso.ApproverUser_ID = usuarioId;
+            paso.StatusId = 4; // Observado
+            paso.ApproverUserId = usuarioId;
             paso.DecisionDate = DateTime.Now;
+            paso.Observations = observacion;
 
             await _context.SaveChangesAsync();
             return true;
