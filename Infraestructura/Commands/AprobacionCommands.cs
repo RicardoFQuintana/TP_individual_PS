@@ -21,43 +21,72 @@ namespace _2_Infraestructura.Commands
         public async Task<bool> AprobarPasoAsync(long pasoId, int usuarioId, string observacion)
         {
             var paso = await _context.ProjectApprovalSteps.FindAsync(pasoId);
-            if (paso == null || paso.ApproverUserId != null)
+
+            if (paso == null || paso.StatusId != 1)
                 return false;
 
-            bool yaAprobo = await _context.ProjectApprovalSteps
-                .AnyAsync(p =>
-                    p.ProjectProposalId == paso.ProjectProposalId &&
-                    p.ApproverUserId == usuarioId);
+            var primerPasoPendiente = await _context.ProjectApprovalSteps
+                .Where(p => p.ProjectProposalId == paso.ProjectProposalId && p.StatusId == 1)
+                .OrderBy(p => p.StepOrder)
+                .FirstOrDefaultAsync();
 
-            if (yaAprobo)
+            if (primerPasoPendiente == null || primerPasoPendiente.Id != paso.Id)
+                return false;
+
+            if (paso.ApproverUserId != null)
+                return false;
+
+            if (paso.ApproverRoleId == null)
+                return false;
+
+            // Verificamos si el usuario tiene el rol requerido
+            var user = await _context.Users
+                .Include(u => u.Role)
+                .FirstOrDefaultAsync(u => u.Id == usuarioId);
+
+            if (user == null || user.RoleId != paso.ApproverRoleId)
                 return false;
 
             paso.StatusId = 2; // Aprobado
             paso.ApproverUserId = usuarioId;
-            paso.DecisionDate = DateTime.Now;
+            paso.DecisionDate = DateTime.UtcNow;
             paso.Observations = observacion;
 
             await _context.SaveChangesAsync();
             return true;
         }
-
         public async Task<bool> RechazarPasoAsync(long pasoId, int usuarioId, string observacion)
         {
             var paso = await _context.ProjectApprovalSteps.FindAsync(pasoId);
-            if (paso == null || paso.ApproverUserId != null)
+
+            if (paso == null || paso.StatusId != 1)
                 return false;
 
-            bool yaAprobo = await _context.ProjectApprovalSteps
-                .AnyAsync(p =>
-                    p.ProjectProposalId == paso.ProjectProposalId &&
-                    p.ApproverUserId == usuarioId);
+            var primerPasoPendiente = await _context.ProjectApprovalSteps
+                .Where(p => p.ProjectProposalId == paso.ProjectProposalId && p.StatusId == 1)
+                .OrderBy(p => p.StepOrder)
+                .FirstOrDefaultAsync();
 
-            if (yaAprobo)
+            if (primerPasoPendiente == null || primerPasoPendiente.Id != paso.Id)
+                return false;
+
+            if (paso.ApproverUserId != null)
+                return false;
+
+            if (paso.ApproverRoleId == null)
+                return false;
+
+            // Verificamos si el usuario tiene el rol requerido
+            var user = await _context.Users
+                .Include(u => u.Role)
+                .FirstOrDefaultAsync(u => u.Id == usuarioId);
+
+            if (user == null || user.RoleId != paso.ApproverRoleId)
                 return false;
 
             paso.StatusId = 3; // Rechazado
             paso.ApproverUserId = usuarioId;
-            paso.DecisionDate = DateTime.Now;
+            paso.DecisionDate = DateTime.UtcNow;
             paso.Observations = observacion;
 
             await _context.SaveChangesAsync();
@@ -67,20 +96,35 @@ namespace _2_Infraestructura.Commands
         public async Task<bool> ObservarPasoAsync(long pasoId, int usuarioId, string observacion)
         {
             var paso = await _context.ProjectApprovalSteps.FindAsync(pasoId);
-            if (paso == null || paso.ApproverUserId != null)
+
+            if (paso == null || paso.StatusId != 1)
                 return false;
 
-            bool yaAprobo = await _context.ProjectApprovalSteps
-                .AnyAsync(p =>
-                    p.ProjectProposalId == paso.ProjectProposalId &&
-                    p.ApproverUserId == usuarioId);
+            var primerPasoPendiente = await _context.ProjectApprovalSteps
+                .Where(p => p.ProjectProposalId == paso.ProjectProposalId && p.StatusId == 1)
+                .OrderBy(p => p.StepOrder)
+                .FirstOrDefaultAsync();
 
-            if (yaAprobo)
+            if (primerPasoPendiente == null || primerPasoPendiente.Id != paso.Id)
+                return false;
+
+            if (paso.ApproverUserId != null)
+                return false;
+
+            if (paso.ApproverRoleId == null)
+                return false;
+
+            // Verificamos si el usuario tiene el rol requerido
+            var user = await _context.Users
+                .Include(u => u.Role)
+                .FirstOrDefaultAsync(u => u.Id == usuarioId);
+
+            if (user == null || user.RoleId != paso.ApproverRoleId)
                 return false;
 
             paso.StatusId = 4; // Observado
             paso.ApproverUserId = usuarioId;
-            paso.DecisionDate = DateTime.Now;
+            paso.DecisionDate = DateTime.UtcNow;
             paso.Observations = observacion;
 
             await _context.SaveChangesAsync();
