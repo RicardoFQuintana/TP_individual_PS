@@ -11,5 +11,6 @@ namespace _3_Aplicacion.Interfaces.IServices
     {
         Task<List<ProjectApprovalStep>> MisPasos(List<ProjectProposal> propuestas);
         Task<List<ProjectApprovalStep>> ObtenerPasosDePropuesta(Guid id);
+        Task<ProjectApprovalStep?> ObtenerPasoPorId(int pasoId);
     }
 }

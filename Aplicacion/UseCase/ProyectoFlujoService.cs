@@ -37,6 +37,11 @@ namespace _3_Aplicacion.UseCase
             {
                 await _proyectoC.CambiarEstadoPropuestaAsync(propuestaId, 4);
             }
+            else
+            {
+                // Hay pasos pendientes u otro estado, el proyecto debe quedar Pending
+                await _proyectoC.CambiarEstadoPropuestaAsync(propuestaId, 1);
+            }
         }
     }
 }

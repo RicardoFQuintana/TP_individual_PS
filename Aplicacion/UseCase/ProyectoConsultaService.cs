@@ -36,7 +36,7 @@ namespace _3_Aplicacion.UseCase
             return propuesta;
         }
         
-        public async Task<List<ProjectProposal>> ListarProyectosFiltrados(string? title, int? statusId, int? createdByUserId, int? approverUserId)
+        public async Task<List<ProjectProposal>> ListarProyectosFiltrados(string? title, int? statusId, int? createdByUserId, int? approverUserId, int? typeId, int? areaId)
         {
             var query = await _proyectoQ.ObtenerTodosPropuestasAsync();
 
@@ -57,6 +57,12 @@ namespace _3_Aplicacion.UseCase
 
                 query = query.Where(p => idsFiltrados.Contains(p.Id)).ToList();
             }
+
+            if (typeId.HasValue)
+                query = query.Where(p => p.TypeId == typeId.Value).ToList();
+
+            if (areaId.HasValue)
+                query = query.Where(p => p.AreaId == areaId.Value).ToList();
 
             return query;
         }

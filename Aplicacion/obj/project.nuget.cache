@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "Z+9OpPEGLHY=",
+  "dgSpecHash": "YIFuCrCucpc=",
   "success": true,
-  "projectFilePath": "E:\\UNAJ\\Proyecto software\\TP_Individual_Parte_1\\Aplicacion\\3_Aplicacion.csproj",
+  "projectFilePath": "E:\\UNAJ\\Proyecto software\\TP_Individual_Parte_3\\TP3-Quintana_Ricardo\\BackEnd\\TP\\Aplicacion\\3_Aplicacion.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\54116\\.nuget\\packages\\humanizer.core\\2.14.1\\humanizer.core.2.14.1.nupkg.sha512",
     "C:\\Users\\54116\\.nuget\\packages\\microsoft.bcl.asyncinterfaces\\7.0.0\\microsoft.bcl.asyncinterfaces.7.0.0.nupkg.sha512",

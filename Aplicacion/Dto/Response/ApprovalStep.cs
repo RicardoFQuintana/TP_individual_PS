@@ -8,13 +8,14 @@ using _3_Aplicacion.Dto.Response;
 namespace _3_Aplicacion.Dto.Response
 {
     public class ApprovalStep
-{
-    public long id { get; set; }
-    public int stepOrder { get; set; }
-    public DateTime? decisionDate { get; set; }
-    public string? observations { get; set; }
-    public UserDto? approverUser { get; set; }
-    public GenericResponse?  approverRole { get; set; }
-    public GenericResponse? status { get; set; }
-}
+    {
+        public long id { get; set; }
+        public int stepOrder { get; set; }
+        public DateTime? decisionDate { get; set; }
+        public string? observations { get; set; }
+        public Users? approverUser { get; set; }
+        public GenericResponse? approverRole { get; set; }
+        public GenericResponse? status { get; set; }
+
+    }
 }

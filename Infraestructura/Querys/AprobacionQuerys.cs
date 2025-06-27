@@ -40,6 +40,7 @@ namespace _2_Infraestructura.Querys
                 .Include(p => p.Status)
                 .Where(p =>
                     p.StatusId == 1 && // Pendiente
+                    p.ProjectProposal.StatusId == 1 &&
                     (p.ApproverUserId == null || p.ApproverUserId == usuario.Id) &&
                     usuario.RoleId == p.ApproverRoleId)
                 .ToListAsync();

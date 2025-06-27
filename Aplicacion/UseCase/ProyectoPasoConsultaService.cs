@@ -29,6 +29,11 @@ namespace _3_Aplicacion.UseCase
         {
             return await _proyectoQ.ObtenerPasosPorPropuestaAsync(id);
         }
-       
+
+        public async Task<ProjectApprovalStep?> ObtenerPasoPorId(int pasoId)
+        {
+            return await _proyectoQ.ObtenerPasoPorIdAsync(pasoId);
+        }
+
     }
 }

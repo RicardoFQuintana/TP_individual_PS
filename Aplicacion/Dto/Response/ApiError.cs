@@ -8,6 +8,6 @@ namespace _3_Aplicacion.Dto.Response
 {
     public class ApiError
     {
-        public string? Message { get; set; }
+        public string? message { get; set; }
     }
 }

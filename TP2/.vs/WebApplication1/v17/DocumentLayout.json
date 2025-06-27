@@ -1,0 +1,102 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "E:\\UNAJ\\Proyecto software\\TP_Individual_Parte_3\\TP3-Quintana_Ricardo\\BackEnd\\TP_Individual_Parte_2\\WebApplication1\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{7E3BD967-955C-483D-B162-011F460D3C11}|1_WebApplication.csproj|e:\\unaj\\proyecto software\\tp_individual_parte_3\\tp3-quintana_ricardo\\backend\\tp_individual_parte_2\\webapplication1\\controllers\\projectcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7E3BD967-955C-483D-B162-011F460D3C11}|1_WebApplication.csproj|solutionrelative:controllers\\projectcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7E3BD967-955C-483D-B162-011F460D3C11}|1_WebApplication.csproj|e:\\unaj\\proyecto software\\tp_individual_parte_3\\tp3-quintana_ricardo\\backend\\tp_individual_parte_2\\webapplication1\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{7E3BD967-955C-483D-B162-011F460D3C11}|1_WebApplication.csproj|solutionrelative:appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7E3BD967-955C-483D-B162-011F460D3C11}|1_WebApplication.csproj|e:\\unaj\\proyecto software\\tp_individual_parte_3\\tp3-quintana_ricardo\\backend\\tp_individual_parte_2\\webapplication1\\controllers\\informationcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7E3BD967-955C-483D-B162-011F460D3C11}|1_WebApplication.csproj|solutionrelative:controllers\\informationcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7E3BD967-955C-483D-B162-011F460D3C11}|1_WebApplication.csproj|e:\\unaj\\proyecto software\\tp_individual_parte_3\\tp3-quintana_ricardo\\backend\\tp_individual_parte_2\\webapplication1\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7E3BD967-955C-483D-B162-011F460D3C11}|1_WebApplication.csproj|solutionrelative:program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7E3BD967-955C-483D-B162-011F460D3C11}|1_WebApplication.csproj|e:\\unaj\\proyecto software\\tp_individual_parte_3\\tp3-quintana_ricardo\\backend\\tp_individual_parte_2\\webapplication1\\properties\\launchsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{7E3BD967-955C-483D-B162-011F460D3C11}|1_WebApplication.csproj|solutionrelative:properties\\launchsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 0,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "ProjectController.cs",
+              "DocumentMoniker": "E:\\UNAJ\\Proyecto software\\TP_Individual_Parte_3\\TP3-Quintana_Ricardo\\BackEnd\\TP_Individual_Parte_2\\WebApplication1\\Controllers\\ProjectController.cs",
+              "RelativeDocumentMoniker": "Controllers\\ProjectController.cs",
+              "ToolTip": "E:\\UNAJ\\Proyecto software\\TP_Individual_Parte_3\\TP3-Quintana_Ricardo\\BackEnd\\TP_Individual_Parte_2\\WebApplication1\\Controllers\\ProjectController.cs",
+              "RelativeToolTip": "Controllers\\ProjectController.cs",
+              "ViewState": "AgIAAKwAAAAAAAAAAADwv68AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-23T23:36:50.581Z",
+              "IsPinned": true,
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "appsettings.json",
+              "DocumentMoniker": "E:\\UNAJ\\Proyecto software\\TP_Individual_Parte_3\\TP3-Quintana_Ricardo\\BackEnd\\TP_Individual_Parte_2\\WebApplication1\\appsettings.json",
+              "RelativeDocumentMoniker": "appsettings.json",
+              "ToolTip": "E:\\UNAJ\\Proyecto software\\TP_Individual_Parte_3\\TP3-Quintana_Ricardo\\BackEnd\\TP_Individual_Parte_2\\WebApplication1\\appsettings.json",
+              "RelativeToolTip": "appsettings.json",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2025-06-25T21:56:16.667Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "InformationController.cs",
+              "DocumentMoniker": "E:\\UNAJ\\Proyecto software\\TP_Individual_Parte_3\\TP3-Quintana_Ricardo\\BackEnd\\TP_Individual_Parte_2\\WebApplication1\\Controllers\\InformationController.cs",
+              "RelativeDocumentMoniker": "Controllers\\InformationController.cs",
+              "ToolTip": "E:\\UNAJ\\Proyecto software\\TP_Individual_Parte_3\\TP3-Quintana_Ricardo\\BackEnd\\TP_Individual_Parte_2\\WebApplication1\\Controllers\\InformationController.cs",
+              "RelativeToolTip": "Controllers\\InformationController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-28T09:46:41.951Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "Program.cs",
+              "DocumentMoniker": "E:\\UNAJ\\Proyecto software\\TP_Individual_Parte_3\\TP3-Quintana_Ricardo\\BackEnd\\TP_Individual_Parte_2\\WebApplication1\\Program.cs",
+              "RelativeDocumentMoniker": "Program.cs",
+              "ToolTip": "E:\\UNAJ\\Proyecto software\\TP_Individual_Parte_3\\TP3-Quintana_Ricardo\\BackEnd\\TP_Individual_Parte_2\\WebApplication1\\Program.cs",
+              "RelativeToolTip": "Program.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-28T08:58:50.249Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "launchSettings.json",
+              "DocumentMoniker": "E:\\UNAJ\\Proyecto software\\TP_Individual_Parte_3\\TP3-Quintana_Ricardo\\BackEnd\\TP_Individual_Parte_2\\WebApplication1\\Properties\\launchSettings.json",
+              "RelativeDocumentMoniker": "Properties\\launchSettings.json",
+              "ToolTip": "E:\\UNAJ\\Proyecto software\\TP_Individual_Parte_3\\TP3-Quintana_Ricardo\\BackEnd\\TP_Individual_Parte_2\\WebApplication1\\Properties\\launchSettings.json",
+              "RelativeToolTip": "Properties\\launchSettings.json",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABIAAAA3AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2025-06-14T03:14:54.826Z"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

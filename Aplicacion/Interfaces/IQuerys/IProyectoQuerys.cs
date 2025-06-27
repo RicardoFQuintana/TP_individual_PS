@@ -15,5 +15,6 @@ namespace _3_Aplicacion.Interfaces.IQuerys
         Task<List<ProjectApprovalStep>> ObtenerPasosDePropuestasAsync(List<ProjectProposal> propuestas);
         Task<List<ProjectApprovalStep>> ObtenerPasosPorPropuestaAsync(Guid propuestaId);
         Task<bool> ExisteTituloAsync(string Title);
+        Task<ProjectApprovalStep?> ObtenerPasoPorIdAsync(int pasoId);
     }
 }
