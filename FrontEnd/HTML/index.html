@@ -1,0 +1,63 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Inicio - Propuestas</title>
+    <link rel="stylesheet" href="../CSS/stylesIndex.css">
+</head>
+    <body>
+
+    <header>
+        <span id="nombreUsuario" class="usuario-nombre">Usuario</span>
+        <button class="logout-button" onclick="window.location.href='login.html'" title="Cerrar sesión">⛔</button>
+    </header>
+
+    <div class="main-content">
+        <nav>
+        <button onclick="window.location.href='create.html'">Crear propuesta</button>
+        <button onclick="window.location.href='approver.html'">Aprobar propuestas</button>
+        </nav>
+
+        <section>
+        <!-- Las propuestas reales se insertan dinámicamente con JS -->
+        </section>
+
+        <aside>
+        <h3>Filtros</h3>
+
+        <div class="filter-group">
+            <label for="filtroTitulo">Título</label>
+            <input type="text" id="filtroTitulo" placeholder="Buscar por título">
+        </div>
+
+        <div class="filter-group">
+            <label for="filtroEstado">Estado</label>
+            <select id="filtroEstado">
+            <option value="">Todos</option>
+            <option value="1">Pendiente</option>
+            <option value="2">Aprobado</option>
+            <option value="3">Rechazado</option>
+            </select>
+        </div>
+
+        <div class="filter-group">
+            <label for="filtroTipo">Tipo de proyecto</label>
+            <select id="filtroTipo">
+            <option value="">Todos</option>
+            <!-- Opciones dinámicas -->
+            </select>
+        </div>
+
+        <div class="filter-group">
+            <label for="filtroArea">Área</label>
+            <select id="filtroArea">
+            <option value="">Todas</option>
+            <!-- Opciones dinámicas -->
+            </select>
+        </div>
+
+        </aside>
+    </div>
+
+    <script src="../JS/index.js"></script>
+    </body>
+</html>

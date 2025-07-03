@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Create - Proyectos</title>
+  <link rel="stylesheet" href="../CSS/stylesCreate.css">
+</head>
+<body>
+  
+  <header class="main-header">
+    <button class="home-button" onclick="window.location.href='index.html'" title="Volver al inicio">🏠</button>
+  </header>
+
+  <div class="create-container">
+    <div class="create-box">
+
+        <div class="form-grid">
+          <div class="form-column">
+            <h2 class="form-title">Título</h2>
+                <input type="text" id=titulo placeholder="Título del proyecto" required>
+          </div>
+        </div>
+        
+      <form id="formProyecto" action="#" method="post">
+        <h3>
+            <label>Descripción</label>
+            <textarea id="descripcion" placeholder="Esta es la descripción del proyecto....." rows="4"></textarea>
+        </h3>
+        
+        <!-- Grilla de campos en dos columnas -->
+        <div class="form-grid">
+          <div class="form-column">
+
+            <label>Solicitante</label>
+            <input type="text" id="nombreUsuario" readonly>
+
+            <label>Área</label>
+            <select id="AreaSelect" name="area" required>
+              <option value="">Seleccionar Área</option>
+            </select>
+
+            <label>Monto estimado</label>
+            <input type="number" id="monto" placeholder="XXXX" required>
+
+          </div>
+          <div class="form-column">
+
+            <label>Tipo de proyecto</label>
+            <select id="tipoSelect" name="tipo" required>
+              <option value="">Seleccionar Tipo</option>
+            </select>
+
+            <label>Estado</label>
+            <input type="text" value="Pendiente" readonly>
+
+            <label>Duración estimada</label>
+            <input type="number" id="duracion" placeholder="Dias" required>
+
+          </div>
+        </div>
+
+        <button type="submit">Crear</button>
+
+      </form>
+    </div>
+    
+  </div>
+
+  <script src="../JS/create.js"></script>
+</body>
+</html>

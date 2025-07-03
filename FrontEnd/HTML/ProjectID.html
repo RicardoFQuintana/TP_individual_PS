@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Detalles - Proyecto</title>
+  <link rel="stylesheet" href="../CSS/stylesProjectID.css">
+</head>
+<body>
+  <header class="main-header">
+    <button class="home-button" onclick="window.location.href='index.html'" title="Volver al inicio">🏠</button>
+  </header>
+
+  <div class="Project-container">
+    <div class="Project-box">
+
+      <div class="form-grid">
+          <div class="form-column">
+            <h2 class="form-title">Título</h2>
+                <input type="text" id=titulo readonly>
+          </div>
+        </div>
+
+      <h3>
+            <label>Descripción</label>
+            <textarea id="descripcion" rows="4" readonly></textarea>
+      </h3>
+
+      <!-- Grilla de campos en dos columnas -->
+        <div class="form-grid">
+          <div class="form-column">
+
+            <label>Solicitante</label>
+            <input type="text" id="nombreUsuario" readonly>
+
+            <label>Área</label>
+            <input type="text" id="area" readonly>
+
+            <label>Monto estimado</label>
+            <input type="number" id="monto" readonly>
+
+          </div>
+          <div class="form-column">
+
+            <label>Tipo de proyecto</label>
+            <input type="text" id="tipo" readonly>
+
+            <label>Estado</label>
+            <input type="text" id="estado" readonly>
+
+            <label>Duración estimada</label>
+            <input type="number" id="duracion" readonly>
+
+          </div>
+        </div>
+
+      <h3>Flujo de aprobación</h3>
+      <div class="flow-container" id="pasos"></div>
+
+        <h3 id="observacionBlock" style="display: none;">
+            <label>Observaciones</label>
+            <textarea id="observacion" rows="4" readonly></textarea>
+        </h3>
+
+    </div>
+  </div>
+
+  <script src="../JS/ProjectID.js"></script>
+</body>
+</html>

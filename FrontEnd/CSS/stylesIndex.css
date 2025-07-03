@@ -1,0 +1,131 @@
+body {
+  margin: 0;
+  background-color: #0e1620;
+  font-family: 'Segoe UI', sans-serif;
+  color: #ffffff;
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+}
+header {
+  background-color: #0e1620;
+  padding: 10px 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.usuario-nombre {
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.logout-button {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background-color: #dc3545;
+  color: white;
+  border: none;
+  font-size: 24px;
+  cursor: pointer;
+  box-shadow: 0 0 10px rgba(0,0,0,0.3);
+}
+.main-content {
+  display: flex;
+  flex: 1;
+  overflow: hidden;
+}
+nav {
+  background-color: #0e1620;
+  width: 200px;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+nav button {
+  padding: 10px;
+  border: none;
+  border-radius: 8px;
+  background-color: #1e2235;
+  color: white;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+nav button:hover {
+  background-color: #3a3f5a;
+}
+aside {
+  background-color: #0e1620;
+  width: 250px;
+  padding: 20px;
+}
+aside h3 {
+  margin-top: 0;
+  font-size: 18px;
+}
+.filter-group {
+  margin-bottom: 20px;
+}
+.filter-group label {
+  display: block;
+  margin-bottom: 6px;
+  font-weight: bold;
+}
+.filter-group input,
+.filter-group select {
+  width: 100%;
+  padding: 10px;
+  border-radius: 8px;
+  border: none;
+  background-color: #1e2235;
+  color: #ffffff;
+}
+section {
+  flex: 1;
+  padding: 40px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-content: flex-start;
+  gap: 20px;
+  overflow-y: auto;
+  min-height: 100%;
+}
+.propuesta-card {
+  background-color: #2c2f4a;
+  border-radius: 15px;
+  padding: 20px;
+  width: 200px;
+  position: relative;
+  box-shadow: 0 0 10px rgba(0,0,0,0.3);
+  margin-bottom: 20px;
+}
+.propuesta-card h4 {
+  margin: 0 0 10px 0;
+}
+.estado {
+  font-weight: bold;
+  color: #ccc;
+  padding: 0 0 10px 0;
+}
+.card-buttons {
+  position: absolute;
+  bottom: 10px;
+  width: calc(100% - 40px);
+  display: flex;
+  justify-content: space-between;
+}
+.card-buttons button {
+  padding: 5px 10px;
+  font-size: 14px;
+  border: none;
+  border-radius: 6px;
+  background-color: #1e2235;
+  color: white;
+  cursor: pointer;
+}
+.card-buttons button:hover {
+  background-color: #3a3f5a;
+}

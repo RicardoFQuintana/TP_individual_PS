@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Aprobacion - Proyecto</title>
+  <link rel="stylesheet" href="../CSS/stylesApprover.css">
+</head>
+<body>
+
+  <header class="main-header">
+    <button class="home-button" onclick="window.location.href='index.html'" title="Volver al inicio">🏠</button>
+  </header>
+
+  <div class="Project-container">
+    <div class="Project-box">
+
+      <form id="formProyecto">
+        <div class="form-grid">
+            <div class="form-column">
+              <h2 class="form-title">Título</h2>
+                  <input type="text" id="titulo" readonly>
+            </div>
+          </div>
+
+        <h3>
+              <label>Descripción</label>
+              <textarea id="descripcion" rows="4" readonly></textarea>
+        </h3>
+
+        <div class="form-grid">
+            <div class="form-column">
+              <label>Área</label>
+              <input type="text" id="area" readonly>
+              <label>Monto estimado</label>
+              <input type="number" id="monto" readonly>
+            </div>
+            <div class="form-column">
+              <label>Tipo de proyecto</label>
+              <input type="text" id="tipo" readonly>
+              <label>Duración estimada</label>
+              <input type="number" id="duracion" readonly>
+            </div>
+          </div>
+
+        <h3>
+            <label>Observaciones</label>
+            <textarea id="observacion" rows="4" placeholder="Opcional"></textarea>
+        </h3>
+
+        <div class="button-container">
+          <button id="btnRechazar" class="circle-button btn-rechazar" title="Rechazar">✖</button>
+          <button id="btnObservar" class="circle-button btn-observar" title="Observar">👁</button>
+          <button id="btnAprobar" class="circle-button btn-aprobar" title="Aprobar">✓</button>
+        </div>
+
+
+      </form>
+
+    </div>
+  </div>
+
+  <script src="../JS/Approver.js"></script>
+</body>
+</html>

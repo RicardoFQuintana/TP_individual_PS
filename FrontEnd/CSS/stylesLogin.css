@@ -1,0 +1,65 @@
+/* Fondo de toda la página */
+body {
+  margin: 0;
+  padding: 0;
+  background-color: #0e1620;
+  font-family: 'Segoe UI', sans-serif;
+  color: #ffffff;
+}
+
+/* Contenedor que centra todo */
+.login-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+/* Caja principal del login */
+.login-box {
+  background-color: #2c2f4a;
+  padding: 40px 30px;
+  border-radius: 15px;
+  width: 100%;
+  max-width: 400px;
+  text-align: center;
+  box-shadow: 0 0 15px rgba(0,0,0,0.3);
+  
+}
+
+/* Estilo moderno para el <select> */
+.login-box select {
+  width: 100%;
+  padding: 12px;
+  background-color: #1e2235;
+  color: #ffffff;
+  border: 1px solid #444;
+  border-radius: 8px;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  font-size: 16px;
+  appearance: none; /* saca el estilo del navegador */
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  background-image: url("data:image/svg+xml;charset=US-ASCII,%3Csvg%20fill%3D%22white%22%20height%3D%2224%22%20viewBox%3D%220%200%2024%2024%22%20width%3D%2224%22%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%3E%3Cpath%20d%3D%22M7%2010l5%205%205-5z%22/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right 10px center;
+  background-size: 16px 16px;
+}
+
+/* Botón de ingresar */
+form button {
+  width: 100%;
+  padding: 12px;
+  background-color: #4A90E2;
+  color: rgb(249, 249, 249);
+  border: none;
+  border-radius: 8px;
+  font-weight: bold;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+form button:hover {
+  background-color: #008a25;
+}

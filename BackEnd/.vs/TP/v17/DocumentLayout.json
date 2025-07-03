@@ -1,0 +1,167 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "E:\\UNAJ\\Proyecto software\\TP_Individual_Parte_3\\TP\\BackEnd\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{A228EF75-94A8-4C93-A880-FEEBA0EDC103}|Aplicacion\\3_Aplicacion.csproj|e:\\unaj\\proyecto software\\tp_individual_parte_3\\tp\\backend\\aplicacion\\usecase\\proyectocreacionservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A228EF75-94A8-4C93-A880-FEEBA0EDC103}|Aplicacion\\3_Aplicacion.csproj|solutionrelative:aplicacion\\usecase\\proyectocreacionservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A228EF75-94A8-4C93-A880-FEEBA0EDC103}|Aplicacion\\3_Aplicacion.csproj|e:\\unaj\\proyecto software\\tp_individual_parte_3\\tp\\backend\\aplicacion\\usecase\\apipendingstepsservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A228EF75-94A8-4C93-A880-FEEBA0EDC103}|Aplicacion\\3_Aplicacion.csproj|solutionrelative:aplicacion\\usecase\\apipendingstepsservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A228EF75-94A8-4C93-A880-FEEBA0EDC103}|Aplicacion\\3_Aplicacion.csproj|e:\\unaj\\proyecto software\\tp_individual_parte_3\\tp\\backend\\aplicacion\\dto\\response\\approvalstep.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A228EF75-94A8-4C93-A880-FEEBA0EDC103}|Aplicacion\\3_Aplicacion.csproj|solutionrelative:aplicacion\\dto\\response\\approvalstep.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A228EF75-94A8-4C93-A880-FEEBA0EDC103}|Aplicacion\\3_Aplicacion.csproj|e:\\unaj\\proyecto software\\tp_individual_parte_3\\tp\\backend\\aplicacion\\dto\\response\\project.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A228EF75-94A8-4C93-A880-FEEBA0EDC103}|Aplicacion\\3_Aplicacion.csproj|solutionrelative:aplicacion\\dto\\response\\project.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A228EF75-94A8-4C93-A880-FEEBA0EDC103}|Aplicacion\\3_Aplicacion.csproj|e:\\unaj\\proyecto software\\tp_individual_parte_3\\tp\\backend\\aplicacion\\usecase\\proyectoconsultaservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A228EF75-94A8-4C93-A880-FEEBA0EDC103}|Aplicacion\\3_Aplicacion.csproj|solutionrelative:aplicacion\\usecase\\proyectoconsultaservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BA5730C5-7747-D16F-D251-FA65690BE662}|TP2\\1_WebApplication.csproj|e:\\unaj\\proyecto software\\tp_individual_parte_3\\tp\\backend\\tp2\\controllers\\projectcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BA5730C5-7747-D16F-D251-FA65690BE662}|TP2\\1_WebApplication.csproj|solutionrelative:tp2\\controllers\\projectcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\54116\\AppData\\Local\\Temp\\Rar$DIa23464.46565\\ProjectController.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BA5730C5-7747-D16F-D251-FA65690BE662}|TP2\\1_WebApplication.csproj|e:\\unaj\\proyecto software\\tp_individual_parte_3\\tp\\backend\\tp2\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BA5730C5-7747-D16F-D251-FA65690BE662}|TP2\\1_WebApplication.csproj|solutionrelative:tp2\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\54116\\Desktop\\Revisar.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 2,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "ApprovalStep.cs",
+              "DocumentMoniker": "E:\\UNAJ\\Proyecto software\\TP_Individual_Parte_3\\TP\\BackEnd\\Aplicacion\\Dto\\Response\\ApprovalStep.cs",
+              "RelativeDocumentMoniker": "Aplicacion\\Dto\\Response\\ApprovalStep.cs",
+              "ToolTip": "E:\\UNAJ\\Proyecto software\\TP_Individual_Parte_3\\TP\\BackEnd\\Aplicacion\\Dto\\Response\\ApprovalStep.cs",
+              "RelativeToolTip": "Aplicacion\\Dto\\Response\\ApprovalStep.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABMAAAAdAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-03T05:59:18.842Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "Project.cs",
+              "DocumentMoniker": "E:\\UNAJ\\Proyecto software\\TP_Individual_Parte_3\\TP\\BackEnd\\Aplicacion\\Dto\\Response\\Project.cs",
+              "RelativeDocumentMoniker": "Aplicacion\\Dto\\Response\\Project.cs",
+              "ToolTip": "E:\\UNAJ\\Proyecto software\\TP_Individual_Parte_3\\TP\\BackEnd\\Aplicacion\\Dto\\Response\\Project.cs",
+              "RelativeToolTip": "Aplicacion\\Dto\\Response\\Project.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABMAAAA2AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-03T05:59:10.163Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "ProyectoCreacionService.cs",
+              "DocumentMoniker": "E:\\UNAJ\\Proyecto software\\TP_Individual_Parte_3\\TP\\BackEnd\\Aplicacion\\UseCase\\ProyectoCreacionService.cs",
+              "RelativeDocumentMoniker": "Aplicacion\\UseCase\\ProyectoCreacionService.cs",
+              "ToolTip": "E:\\UNAJ\\Proyecto software\\TP_Individual_Parte_3\\TP\\BackEnd\\Aplicacion\\UseCase\\ProyectoCreacionService.cs",
+              "RelativeToolTip": "Aplicacion\\UseCase\\ProyectoCreacionService.cs",
+              "ViewState": "AgIAAGEAAAAAAAAAAAAIwHcAAAApAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-03T05:58:38.035Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "ProyectoConsultaService.cs",
+              "DocumentMoniker": "E:\\UNAJ\\Proyecto software\\TP_Individual_Parte_3\\TP\\BackEnd\\Aplicacion\\UseCase\\ProyectoConsultaService.cs",
+              "RelativeDocumentMoniker": "Aplicacion\\UseCase\\ProyectoConsultaService.cs",
+              "ToolTip": "E:\\UNAJ\\Proyecto software\\TP_Individual_Parte_3\\TP\\BackEnd\\Aplicacion\\UseCase\\ProyectoConsultaService.cs",
+              "RelativeToolTip": "Aplicacion\\UseCase\\ProyectoConsultaService.cs",
+              "ViewState": "AgIAABYAAAAAAAAAAAAgwAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-03T05:58:11.506Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "ProjectController.cs",
+              "DocumentMoniker": "E:\\UNAJ\\Proyecto software\\TP_Individual_Parte_3\\TP\\BackEnd\\TP2\\Controllers\\ProjectController.cs",
+              "RelativeDocumentMoniker": "TP2\\Controllers\\ProjectController.cs",
+              "ToolTip": "E:\\UNAJ\\Proyecto software\\TP_Individual_Parte_3\\TP\\BackEnd\\TP2\\Controllers\\ProjectController.cs",
+              "RelativeToolTip": "TP2\\Controllers\\ProjectController.cs",
+              "ViewState": "AgIAAIsAAAAAAAAAAAAcwAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-03T05:56:40.633Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "ProjectController.cs",
+              "DocumentMoniker": "C:\\Users\\54116\\AppData\\Local\\Temp\\Rar$DIa23464.46565\\ProjectController.cs",
+              "ToolTip": "C:\\Users\\54116\\AppData\\Local\\Temp\\Rar$DIa23464.46565\\ProjectController.cs",
+              "ViewState": "AgIAAAgBAAAAAAAAAAAAACgBAAAYAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-03T05:55:56.712Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "Program.cs",
+              "DocumentMoniker": "E:\\UNAJ\\Proyecto software\\TP_Individual_Parte_3\\TP\\BackEnd\\TP2\\Program.cs",
+              "RelativeDocumentMoniker": "TP2\\Program.cs",
+              "ToolTip": "E:\\UNAJ\\Proyecto software\\TP_Individual_Parte_3\\TP\\BackEnd\\TP2\\Program.cs",
+              "RelativeToolTip": "TP2\\Program.cs",
+              "ViewState": "AgIAABYAAAAAAAAAAAAAADYAAABQAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-03T05:38:31.767Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "ApiPendingStepsService.cs",
+              "DocumentMoniker": "E:\\UNAJ\\Proyecto software\\TP_Individual_Parte_3\\TP\\BackEnd\\Aplicacion\\UseCase\\ApiPendingStepsService.cs",
+              "RelativeDocumentMoniker": "Aplicacion\\UseCase\\ApiPendingStepsService.cs",
+              "ToolTip": "E:\\UNAJ\\Proyecto software\\TP_Individual_Parte_3\\TP\\BackEnd\\Aplicacion\\UseCase\\ApiPendingStepsService.cs",
+              "RelativeToolTip": "Aplicacion\\UseCase\\ApiPendingStepsService.cs",
+              "ViewState": "AgIAABgAAAAAAAAAAAAIwDEAAAANAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-03T04:31:12.24Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "Revisar.cs",
+              "DocumentMoniker": "C:\\Users\\54116\\Desktop\\Revisar.cs",
+              "ToolTip": "C:\\Users\\54116\\Desktop\\Revisar.cs",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAAAEQAAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-03T04:14:09.551Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
