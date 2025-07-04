@@ -195,7 +195,7 @@
         }
       }
     },
-    "/api/Project/Project": {
+    "/api/Project": {
       "get": {
         "tags": [
           "Project"
@@ -280,9 +280,7 @@
             }
           }
         }
-      }
-    },
-    "/api/Project": {
+      },
       "post": {
         "tags": [
           "Project"
@@ -434,29 +432,6 @@
           }
         }
       }
-    },
-    "/api/Project/pendientes/{userId}": {
-      "get": {
-        "tags": [
-          "Project"
-        ],
-        "parameters": [
-          {
-            "name": "userId",
-            "in": "path",
-            "required": true,
-            "schema": {
-              "type": "integer",
-              "format": "int32"
-            }
-          }
-        ],
-        "responses": {
-          "200": {
-            "description": "OK"
-          }
-        }
-      }
     }
   },
   "components": {
@@ -503,10 +478,6 @@
           },
           "status": {
             "$ref": "#/components/schemas/GenericResponse"
-          },
-          "projectId": {
-            "type": "string",
-            "format": "uuid"
           }
         },
         "additionalProperties": false

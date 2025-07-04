@@ -17,8 +17,6 @@ namespace _3_Aplicacion.Dto.Response
         public GenericResponse? approverRole { get; set; }
         public GenericResponse? status { get; set; }
 
-        public Guid projectId { get; set; }
-
 
     }
 }

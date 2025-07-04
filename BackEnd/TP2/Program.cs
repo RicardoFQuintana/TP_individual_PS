@@ -54,7 +54,6 @@ builder.Services.AddScoped<IApiProjectGetService, ApiProjectGetService>();
 builder.Services.AddScoped<IApiProjectCreateService, ApiProjectCreateService>();
 builder.Services.AddScoped<IApiProjectUpdateService, ApiProjectUpdateService>();
 builder.Services.AddScoped<IApiDecisionService, ApiDecisionService>();
-builder.Services.AddScoped<IApiPendingStepsService, ApiPendingStepsService>();
 
 
 // Configurar controladores y Swagger

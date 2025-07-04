@@ -15,31 +15,33 @@ namespace WebApplication1.Controllers
         private readonly IApiProjectCreateService _createService;
         private readonly IApiProjectUpdateService _updateService;
         private readonly IApiDecisionService _decisionService;
-        private readonly IApiPendingStepsService _pendingService;
 
         public ProjectController(IApiProjectListService listService, IApiProjectGetService getService, IApiProjectCreateService createService,
-                        IApiPendingStepsService pendingService, IApiProjectUpdateService updateService, IApiDecisionService decisionService)
+                                                                    IApiProjectUpdateService updateService, IApiDecisionService decisionService)
         {
             _listService = listService;
             _getService = getService;
             _createService = createService;
             _updateService = updateService;
             _decisionService = decisionService;
-            _pendingService = pendingService;
         }
 
         //GET /api/Project?title=&statusId=&createdByUserId=&approverUserId=
-        [HttpGet("Project")]
+        [HttpGet]
         public async Task<ActionResult<List<ProjectShort>>> GetProjects([FromQuery] string? title, [FromQuery] int? status, [FromQuery] int? applicant,
                                                                             [FromQuery] int? approvalUser, [FromQuery] int? typeId, [FromQuery] int? areaId)
         {
             try
             {
+                if ((applicant.HasValue && (applicant <= 0 || applicant >= 7)) || (approvalUser.HasValue && (approvalUser <= 0 || approvalUser >= 7)) || (status.HasValue && (status <= 0 || status >= 5)) 
+                                                                                                    || (areaId.HasValue && (areaId <= 0 || areaId >= 5)) || (typeId.HasValue && (typeId <= 0 || typeId >= 5)))
+                    return BadRequest(new ApiError { message = "Parámetro de consulta inválido" });
+
 
                 var result = await _listService.Listar(title, status, applicant, approvalUser, typeId, areaId);
 
                 if (result.Count == 0)
-                    return BadRequest(new ApiError { message = "Parámetro de consulta inválido" });
+                    return BadRequest(new ApiError { message = "no hay proyectos" });
 
                 return Ok(result);
 
@@ -171,19 +173,5 @@ namespace WebApplication1.Controllers
             }
         }
 
-        //GET /api/Project/pendientes/{userId}
-        [HttpGet("pendientes/{userId}")]
-        public async Task<IActionResult> GetPasosPendientes(int userId)
-        {
-            try
-            {
-                var pasos = await _pendingService.ObtenerPendientes(userId);
-                return Ok(pasos);
-            }
-            catch (Exception ex)
-            {
-                return StatusCode(500, new ApiError { message = $"Error al obtener pasos pendientes: {ex.Message}" });
-            }
-        }
     }
 }

@@ -119,8 +119,7 @@ namespace _3_Aplicacion.UseCase
                     {
                         id = s.Status.Id,
                         name = s.Status.Name,
-                    } : null,
-                    projectId = s.ProjectProposalId
+                    } : null
                 }).ToList()
             };
         }
