@@ -58,9 +58,16 @@ namespace _2_Infraestructura.Querys
         }
         public async Task<List<ProjectApprovalStep>> ObtenerPasosPorUsuarioAsync(int userId)
         {
+
+            var usuario = await _context.Users.FirstOrDefaultAsync(u => u.Id == userId);
+            if (usuario == null)
+                return new List<ProjectApprovalStep>();
+
+            var rolId = usuario.RoleId;
+
             return await _context.ProjectApprovalSteps
                 .Include(p => p.ProjectProposal)
-                .Where(p => p.ApproverUserId == userId)
+                .Where(p => p.ApproverRoleId == rolId)
                 .ToListAsync();
         }
     }

@@ -1,0 +1,14 @@
+{
+  "ExpandedNodes": [
+    "",
+    "\\BackEnd",
+    "\\BackEnd\\Aplicacion\\UseCase",
+    "\\BackEnd\\Dominio",
+    "\\BackEnd\\Dominio\\Entities",
+    "\\BackEnd\\Infraestructura",
+    "\\BackEnd\\Infraestructura\\Querys",
+    "\\BackEnd\\TP2"
+  ],
+  "SelectedNode": "\\BackEnd\\Dominio\\Entities\\User.cs",
+  "PreviewInSolutionExplorer": false
+}
